@@ -95,6 +95,7 @@
   .step-icon { width: 46px; height: 46px; border-radius: 12px; background: var(--chalk); display: flex; align-items: center; justify-content: center; margin-bottom: 18px; font-size: 22px; }
   .step-title { font-family: 'Bricolage Grotesque', sans-serif; font-size: 20px; font-weight: 700; color: var(--midnight); margin-bottom: 10px; letter-spacing: -0.3px; }
   .step-desc { font-size: 14px; color: var(--mid-gray); line-height: 1.65; font-weight: 300; }
+  .step-legal { font-size: 11px; color: rgba(26,26,46,0.32); line-height: 1.5; font-weight: 300; margin-top: 10px; }
 
   /* ── VERDICTS ── */
   .verdicts-section { background: var(--midnight); padding: 96px 48px; position: relative; overflow: hidden; }
@@ -239,15 +240,15 @@
     <div>
       <div class="hero-badge">
         <div class="badge-dot"></div>
-        <span data-lang="fr">Conseiller IA · Marché canadien de l'occasion</span>
-        <span data-lang="en">AI advisor · Canadian used car market</span>
+        <span data-lang="fr">Propulsé par les données de Canadian Black Book</span>
+        <span data-lang="en">Powered by Canadian Black Book Data</span>
       </div>
 
       <h1 class="hero-title" data-lang="fr">Demandez à Oscar<br>avant <span class="accent">d'acheter.</span></h1>
       <h1 class="hero-title" data-lang="en">Ask Oscar<br>before you <span class="accent">buy.</span></h1>
 
-      <p class="hero-sub" data-lang="fr">Le vendeur connaît la voiture mieux que vous. Oscar rétablit l'équilibre : envoyez-lui l'annonce, il vous dit ce que le prix vaut vraiment et ce qu'il faut vérifier.</p>
-      <p class="hero-sub" data-lang="en">The seller knows the car better than you do. Oscar closes that gap — send him the listing and he'll tell you what the price is really worth and what to check.</p>
+      <p class="hero-sub" data-lang="fr">Le vendeur connaît la voiture mieux que vous. Oscar rétablit l'équilibre&nbsp;: envoyez-lui l'annonce, il vous dit ce que le prix vaut vraiment et ce qu'il faut vérifier.</p>
+      <p class="hero-sub" data-lang="en">The seller knows the car better than you do. Oscar closes that gap. Send him the listing and he'll tell you what the price is really worth and what to check.</p>
 
       <div class="hero-actions">
         <button class="btn-primary" onclick="window.location='#cta'">
@@ -260,7 +261,7 @@
         </button>
       </div>
 
-      <p class="hero-platform-note" data-lang="fr">Assistant conversationnel — accessible depuis n'importe quel navigateur ou appareil mobile</p>
+      <p class="hero-platform-note" data-lang="fr">Assistant conversationnel, accessible depuis n'importe quel navigateur ou appareil mobile</p>
       <p class="hero-platform-note" data-lang="en">Conversational assistant — accessible from any browser or mobile device</p>
 
       <div class="hero-stats">
@@ -302,17 +303,18 @@
           </div>
           <div class="ps-verdict">
             <div class="ps-verdict-top">
-              <span class="ps-badge">GREAT DEAL</span>
+              <span class="ps-badge" data-lang="fr">AUBAINE</span>
+              <span class="ps-badge" data-lang="en">GREAT DEAL</span>
               <span class="ps-saving" data-lang="fr">~$1 800 sous le marché</span>
               <span class="ps-saving" data-lang="en">~$1,800 below market</span>
             </div>
-            <div class="ps-verdict-text" data-lang="fr">Les Civic EX 2021 à ce kilométrage se demandent entre $22 500 et $23 800 au Québec. Le prix est solide — bougez vite.</div>
+            <div class="ps-verdict-text" data-lang="fr">Les Civic EX 2021 à ce kilométrage se demandent entre $22 500 et $23 800 au Québec. Le prix est solide. Bougez vite.</div>
             <div class="ps-verdict-text" data-lang="en">2021 Civic EX at this mileage is listed between $22,500 and $23,800 in Quebec. The price is solid — move fast.</div>
           </div>
           <div class="ps-flags">
-            <div class="ps-flag"><div class="ps-flag-dot" style="background:#EF9F27;"></div><span data-lang="fr">Pas de CarFax mentionné — recommandé</span><span data-lang="en">No CarFax mentioned — recommended</span></div>
+            <div class="ps-flag"><div class="ps-flag-dot" style="background:#EF9F27;"></div><span data-lang="fr">Pas de CarFax mentionné, recommandé</span><span data-lang="en">No CarFax mentioned — recommended</span></div>
             <div class="ps-flag"><div class="ps-flag-dot" style="background:#1D9E75;"></div><span data-lang="fr">Kilométrage cohérent pour l'année</span><span data-lang="en">Mileage consistent with the year</span></div>
-            <div class="ps-flag"><div class="ps-flag-dot" style="background:#1D9E75;"></div><span data-lang="fr">Vendeur privé — pas de frais dealer</span><span data-lang="en">Private seller — no dealer fees</span></div>
+            <div class="ps-flag"><div class="ps-flag-dot" style="background:#1D9E75;"></div><span data-lang="fr">Vendeur privé, pas de frais dealer</span><span data-lang="en">Private seller — no dealer fees</span></div>
           </div>
         </div>
       </div>
@@ -332,24 +334,28 @@
         <div class="step-icon">📋</div>
         <div class="step-title" data-lang="fr">Vous envoyez l'annonce</div>
         <div class="step-title" data-lang="en">You share the listing</div>
-        <p class="step-desc" data-lang="fr">Collez le texte, envoyez une capture d'écran, ou décrivez simplement le véhicule. Oscar accepte AutoTrader, Kijiji, Facebook Marketplace, et le reste.</p>
-        <p class="step-desc" data-lang="en">Paste the text, send a screenshot, or just describe the vehicle. Oscar takes AutoTrader, Kijiji, Facebook Marketplace, and the rest.</p>
+        <p class="step-desc" data-lang="fr">Collez le texte, envoyez une capture d'écran, ou décrivez simplement le véhicule. Oscar lit AutoTrader, Kijiji, Facebook Marketplace, et plus encore.*</p>
+        <p class="step-desc" data-lang="en">Paste the text, send a screenshot, or just describe the car. Oscar reads AutoTrader, Kijiji, Facebook Marketplace, and more.*</p>
+        <p class="step-legal" data-lang="fr">* AutoTrader, Kijiji et Facebook Marketplace sont des marques de commerce de leurs propriétaires respectifs. Oscar n'est affilié à aucune d'elles et analyse uniquement des annonces publiquement accessibles.</p>
+        <p class="step-legal" data-lang="en">* AutoTrader, Kijiji, and Facebook Marketplace are trademarks of their respective owners. Oscar is not affiliated with them and only analyzes publicly available listings.</p>
       </div>
       <div class="step-card">
         <div class="step-num">02</div>
         <div class="step-icon">🔍</div>
         <div class="step-title" data-lang="fr">Oscar compare</div>
         <div class="step-title" data-lang="en">Oscar compares</div>
-        <p class="step-desc" data-lang="fr">Il confronte le prix demandé aux annonces comparables au Canada — même année, même trim, même kilométrage, même région.</p>
-        <p class="step-desc" data-lang="en">He measures the asking price against comparable listings across Canada — same year, same trim, same mileage, same region.</p>
+        <p class="step-desc" data-lang="fr">Il vérifie le prix demandé par rapport aux annonces comparables partout au Canada&nbsp;: même année, trim, kilométrage et région.*</p>
+        <p class="step-desc" data-lang="en">He checks the asking price against comparable listings across Canada — same year, trim, mileage, and region.*</p>
+        <p class="step-legal" data-lang="fr">* Les comparaisons s'appuient sur des annonces publiquement accessibles ainsi que sur les données officielles d'évaluation de Canadian Black Book.</p>
+        <p class="step-legal" data-lang="en">* Comparisons draw on publicly available listings and Canadian Black Book's official valuation data.</p>
       </div>
       <div class="step-card">
         <div class="step-num">03</div>
         <div class="step-icon">✓</div>
         <div class="step-title" data-lang="fr">Oscar vous répond franchement</div>
         <div class="step-title" data-lang="en">Oscar gives it to you straight</div>
-        <p class="step-desc" data-lang="fr">Great deal, fair, meh ou overpriced — avec les chiffres derrière le verdict, les red flags à surveiller, et quoi faire ensuite.</p>
-        <p class="step-desc" data-lang="en">Great deal, fair, meh, or overpriced — with the numbers behind the verdict, the red flags to watch, and what to do next.</p>
+        <p class="step-desc" data-lang="fr">Aubaine, correct, bof ou trop cher&nbsp;: avec les chiffres à l'appui, les red flags à repérer, et les prochaines étapes à suivre.</p>
+        <p class="step-desc" data-lang="en">Great deal, fair, meh, or overpriced — with the numbers behind it, the red flags to watch, and exactly what to do next.</p>
       </div>
     </div>
   </div>
@@ -363,22 +369,22 @@
     <h2 class="section-title" style="color:#F5F5F0; max-width:100%;" data-lang="en">Oscar is on your side. Only yours.</h2>
     <div class="verdicts-grid">
       <div class="verdict-card" style="background:rgba(29,158,117,0.08);">
-        <div class="verdict-pill" style="background:#1D9E75; color:#fff;">Great deal</div>
+        <div class="verdict-pill" style="background:#1D9E75; color:#fff;"><span data-lang="fr">Aubaine</span><span data-lang="en">Great deal</span></div>
         <p class="verdict-desc" data-lang="fr">Prix sous le marché. Une occasion réelle. Il faut agir avant que quelqu'un d'autre le fasse.</p>
         <p class="verdict-desc" data-lang="en">Price below market. A real opportunity. Act before someone else does.</p>
       </div>
       <div class="verdict-card" style="background:rgba(245,245,240,0.03);">
-        <div class="verdict-pill" style="background:rgba(245,245,240,0.1); color:#F5F5F0;">Fair</div>
+        <div class="verdict-pill" style="background:rgba(245,245,240,0.1); color:#F5F5F0;"><span data-lang="fr">Correct</span><span data-lang="en">Fair</span></div>
         <p class="verdict-desc" data-lang="fr">Dans la norme du marché. Pas un vol, pas une aubaine. Vaut le déplacement si la condition est bonne.</p>
         <p class="verdict-desc" data-lang="en">Within market range. Not a steal, not a ripoff. Worth a look if the condition checks out.</p>
       </div>
       <div class="verdict-card" style="background:rgba(239,159,39,0.08);">
-        <div class="verdict-pill" style="background:#EF9F27; color:#1A1A2E;">Meh</div>
-        <p class="verdict-desc" data-lang="fr">Un peu au-dessus du marché. Il y a de la place pour négocier — Oscar vous dit exactement combien.</p>
+        <div class="verdict-pill" style="background:#EF9F27; color:#1A1A2E;"><span data-lang="fr">Bof</span><span data-lang="en">Meh</span></div>
+        <p class="verdict-desc" data-lang="fr">Un peu au-dessus du marché. Il y a de la place pour négocier. Oscar vous dit exactement combien.</p>
         <p class="verdict-desc" data-lang="en">A bit above market. There's room to negotiate — Oscar tells you exactly how much.</p>
       </div>
       <div class="verdict-card" style="background:rgba(226,75,74,0.08);">
-        <div class="verdict-pill" style="background:#E24B4A; color:#fff;">Overpriced</div>
+        <div class="verdict-pill" style="background:#E24B4A; color:#fff;"><span data-lang="fr">Trop cher</span><span data-lang="en">Overpriced</span></div>
         <p class="verdict-desc" data-lang="fr">Le vendeur demande trop. Passez votre tour ou faites une offre agressive. Oscar explique pourquoi.</p>
         <p class="verdict-desc" data-lang="en">The seller is asking too much. Walk away or go in hard. Oscar explains why.</p>
       </div>
@@ -459,7 +465,7 @@
   <h2 class="cta-title" data-lang="en">Ask Oscar<br>before you sign.</h2>
   <p class="cta-sub" data-lang="fr">Gratuit. Aucune carte de crédit requise. Verdict en moins de 30 secondes.</p>
   <p class="cta-sub" data-lang="en">Free. No credit card required. Verdict in under 30 seconds.</p>
-  <p class="cta-platform" data-lang="fr">Assistant conversationnel — accessible depuis n'importe quel navigateur ou appareil mobile</p>
+  <p class="cta-platform" data-lang="fr">Assistant conversationnel, accessible depuis n'importe quel navigateur ou appareil mobile</p>
   <p class="cta-platform" data-lang="en">Conversational assistant — accessible from any browser or mobile device</p>
   <button class="btn-dark">
     <span data-lang="fr">Parler à Oscar maintenant</span>
