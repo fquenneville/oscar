@@ -34,6 +34,8 @@
   .nav-left { display: flex; align-items: center; gap: 48px; }
   .logo { font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 22px; color: var(--volt); letter-spacing: -0.5px; text-decoration: none; }
   .logo .dot { color: rgba(232,255,71,0.35); }
+  .logo-block { display: flex; flex-direction: column; }
+  .nav-tagline { font-size: 10px; color: rgba(245,245,240,0.35); font-weight: 300; letter-spacing: 0.02em; margin-top: 2px; white-space: nowrap; }
   .nav-links { display: flex; gap: 36px; list-style: none; }
   .nav-links a { font-size: 14px; color: rgba(245,245,240,0.5); text-decoration: none; font-weight: 400; transition: color 0.2s; }
   .nav-links a:hover { color: rgba(245,245,240,0.9); }
@@ -58,9 +60,6 @@
   .btn-ghost { color: rgba(245,245,240,0.45); font-size: 14px; cursor: pointer; background: none; border: none; display: flex; align-items: center; gap: 6px; transition: color 0.2s; font-family: 'DM Sans', sans-serif; white-space: nowrap; }
   .btn-ghost:hover { color: rgba(245,245,240,0.8); }
   .hero-platform-note { font-size: 12px; color: rgba(245,245,240,0.25); letter-spacing: 0.02em; }
-  .hero-stats { display: flex; gap: 36px; margin-top: 52px; padding-top: 36px; border-top: 1px solid rgba(245,245,240,0.07); }
-  .stat-num { font-family: 'Bebas Neue', sans-serif; font-size: 36px; font-weight: 400; color: var(--volt); line-height: 1; margin-bottom: 5px; letter-spacing: 1px; }
-  .stat-label { font-size: 12px; color: rgba(245,245,240,0.35); font-weight: 300; letter-spacing: 0.02em; }
 
   /* ── PHONE ── */
   .phone-wrap { display: flex; justify-content: center; }
@@ -89,10 +88,11 @@
   .eyebrow { font-size: 11px; font-weight: 600; color: var(--deal-green); letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 14px; }
   .section-title { font-family: 'Bricolage Grotesque', sans-serif; font-size: 52px; font-weight: 800; color: var(--midnight); line-height: 1.04; letter-spacing: -1.2px; margin-bottom: 52px; max-width: 620px; }
   .steps-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-  .step-card { background: #fff; border: 1px solid var(--light-border); border-radius: 18px; padding: 32px 28px; transition: transform 0.25s ease, box-shadow 0.25s ease; }
+  .step-card { background: #fff; border: 1px solid var(--light-border); border-radius: 18px; padding: 32px 28px; transition: transform 0.25s ease, box-shadow 0.25s ease; display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; }
   .step-card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(26,26,46,0.08); }
-  .step-num { font-family: 'Bricolage Grotesque', sans-serif; font-size: 11px; font-weight: 700; color: rgba(26,26,46,0.18); letter-spacing: 0.12em; margin-bottom: 18px; }
-  .step-icon { width: 46px; height: 46px; border-radius: 12px; background: var(--chalk); display: flex; align-items: center; justify-content: center; margin-bottom: 18px; font-size: 22px; }
+  .step-text { min-width: 0; }
+  .step-icon { width: 92px; height: 92px; border-radius: 12px; background: #fff; display: flex; align-items: center; justify-content: center; flex-shrink: 0; overflow: hidden; }
+  .step-icon img { width: 68px; height: 68px; object-fit: contain; transform: scale(1.25); }
   .step-title { font-family: 'Bricolage Grotesque', sans-serif; font-size: 20px; font-weight: 700; color: var(--midnight); margin-bottom: 10px; letter-spacing: -0.3px; }
   .step-desc { font-size: 14px; color: var(--mid-gray); line-height: 1.65; font-weight: 300; }
   .step-legal { font-size: 11px; color: rgba(26,26,46,0.32); line-height: 1.5; font-weight: 300; margin-top: 10px; }
@@ -122,6 +122,16 @@
   .feature-check { width: 18px; height: 18px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 10px; font-weight: 700; margin-top: 1px; }
   .feature-dash { width: 18px; height: 18px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 14px; color: rgba(136,135,128,0.4); margin-top: 1px; }
   .plan-btn { width: 100%; padding: 14px; border-radius: 10px; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 14px; cursor: pointer; border: none; margin-top: 24px; transition: opacity 0.2s, transform 0.15s; }
+  .plan-tagline { font-size: 12px; font-weight: 300; line-height: 1.4; margin-bottom: 16px; }
+  .plan-note { font-size: 12px; font-weight: 300; margin-bottom: 28px; }
+  .pricing-legal { font-size: 11px; color: rgba(26,26,46,0.35); line-height: 1.5; font-weight: 300; text-align: center; max-width: 640px; margin: 24px auto 0; }
+  .pricing-addon { max-width: 960px; margin: 20px auto 0; background: #fff; border: 1px dashed var(--light-border); border-radius: 16px; padding: 24px 28px; display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+  .addon-label { font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 15px; color: var(--midnight); margin-bottom: 4px; }
+  .addon-desc { font-size: 13px; color: var(--mid-gray); font-weight: 300; }
+  .addon-price { font-family: 'Bebas Neue', sans-serif; font-size: 30px; color: var(--midnight); letter-spacing: 0.5px; white-space: nowrap; }
+  .addon-btn { background: var(--midnight); color: var(--volt); font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 13px; padding: 12px 22px; border-radius: 8px; border: none; cursor: pointer; white-space: nowrap; transition: opacity 0.2s, transform 0.15s; }
+  .addon-btn:hover { opacity: 0.88; transform: translateY(-1px); }
+  .addon-right { display: flex; align-items: center; gap: 18px; }
   .plan-btn:hover { opacity: 0.86; transform: translateY(-1px); }
 
   /* ── CTA ── */
@@ -131,6 +141,11 @@
   .cta-platform { font-size: 13px; color: rgba(26,26,46,0.35); margin-bottom: 40px; }
   .btn-dark { background: var(--midnight); color: var(--volt); font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 16px; padding: 17px 40px; border-radius: 9px; border: none; cursor: pointer; transition: opacity 0.2s, transform 0.15s; }
   .btn-dark:hover { opacity: 0.88; transform: translateY(-2px); }
+
+  /* ── COMING SOON ── */
+  .coming-section { background: var(--chalk); padding: 80px 48px; text-align: center; }
+  .coming-title { font-family: 'Bebas Neue', sans-serif; font-size: 56px; font-weight: 400; color: var(--midnight); letter-spacing: 1px; margin-bottom: 14px; }
+  .coming-sub { font-size: 16px; color: rgba(26,26,46,0.55); font-weight: 300; max-width: 520px; margin: 0 auto 32px; line-height: 1.6; }
 
   /* ── FOOTER ── */
   footer { background: var(--midnight); padding: 36px 48px; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(255,255,255,0.04); }
@@ -204,7 +219,6 @@
     .cta-title { font-size: 56px; }
     footer { padding: 28px 24px; flex-direction: column; gap: 20px; text-align: center; }
     .footer-links { flex-wrap: wrap; justify-content: center; }
-    .hero-stats { gap: 24px; }
     .section-title { font-size: 38px; }
   }
 </style>
@@ -213,7 +227,11 @@
 
 <nav>
   <div class="nav-left">
-    <a href="#" class="logo">Oscar<span class="dot">.</span></a>
+    <div class="logo-block">
+      <a href="#" class="logo">Oscar<span class="dot">.</span></a>
+      <span class="nav-tagline" data-lang="fr">Acheter une voiture usagée, en mieux.</span>
+      <span class="nav-tagline" data-lang="en">Buying a used car got better.</span>
+    </div>
     <ul class="nav-links">
       <li data-lang="fr"><a href="#how">Comment ça marche</a></li>
       <li data-lang="fr"><a href="#verdicts">Les verdicts</a></li>
@@ -244,8 +262,8 @@
         <span data-lang="en">Powered by Canadian Black Book Data</span>
       </div>
 
-      <h1 class="hero-title" data-lang="fr">Demandez à Oscar<br>avant <span class="accent">d'acheter.</span></h1>
-      <h1 class="hero-title" data-lang="en">Ask Oscar<br>before you <span class="accent">buy.</span></h1>
+      <h1 class="hero-title" data-lang="fr">Demandez à <span class="accent">Oscar</span><br>avant <span class="accent">d'acheter.</span></h1>
+      <h1 class="hero-title" data-lang="en">Ask <span class="accent">Oscar</span><br>before you <span class="accent">buy.</span></h1>
 
       <p class="hero-sub" data-lang="fr">Le vendeur connaît la voiture mieux que vous. Oscar rétablit l'équilibre&nbsp;: envoyez-lui l'annonce, il vous dit ce que le prix vaut vraiment et ce qu'il faut vérifier.</p>
       <p class="hero-sub" data-lang="en">The seller knows the car better than you do. Oscar closes that gap. Send him the listing and he'll tell you what the price is really worth and what to check.</p>
@@ -263,25 +281,6 @@
 
       <p class="hero-platform-note" data-lang="fr">Assistant conversationnel, accessible depuis n'importe quel navigateur ou appareil mobile</p>
       <p class="hero-platform-note" data-lang="en">Conversational assistant — accessible from any browser or mobile device</p>
-
-      <div class="hero-stats">
-        <div>
-          <div class="stat-num" data-lang="fr">1 analyse</div>
-          <div class="stat-num" data-lang="en">1 analysis</div>
-          <div class="stat-label" data-lang="fr">gratuite par jour</div>
-          <div class="stat-label" data-lang="en">free per day</div>
-        </div>
-        <div>
-          <div class="stat-num">&lt; 30 sec</div>
-          <div class="stat-label" data-lang="fr">pour un verdict complet</div>
-          <div class="stat-label" data-lang="en">for a full verdict</div>
-        </div>
-        <div>
-          <div class="stat-num">FR / EN</div>
-          <div class="stat-label" data-lang="fr">Oscar répond dans votre langue</div>
-          <div class="stat-label" data-lang="en">Oscar answers in your language</div>
-        </div>
-      </div>
     </div>
 
     <div class="phone-wrap">
@@ -330,32 +329,35 @@
     <h2 class="section-title" data-lang="en">Share the listing.<br>Oscar takes it from there.</h2>
     <div class="steps-grid">
       <div class="step-card">
-        <div class="step-num">01</div>
-        <div class="step-icon">📋</div>
-        <div class="step-title" data-lang="fr">Vous envoyez l'annonce</div>
-        <div class="step-title" data-lang="en">You share the listing</div>
-        <p class="step-desc" data-lang="fr">Collez le texte, envoyez une capture d'écran, ou décrivez simplement le véhicule. Oscar lit AutoTrader, Kijiji, Facebook Marketplace, et plus encore.*</p>
-        <p class="step-desc" data-lang="en">Paste the text, send a screenshot, or just describe the car. Oscar reads AutoTrader, Kijiji, Facebook Marketplace, and more.*</p>
-        <p class="step-legal" data-lang="fr">* AutoTrader, Kijiji et Facebook Marketplace sont des marques de commerce de leurs propriétaires respectifs. Oscar n'est affilié à aucune d'elles et analyse uniquement des annonces publiquement accessibles.</p>
-        <p class="step-legal" data-lang="en">* AutoTrader, Kijiji, and Facebook Marketplace are trademarks of their respective owners. Oscar is not affiliated with them and only analyzes publicly available listings.</p>
+        <div class="step-text">
+          <div class="step-title" data-lang="fr">Vous envoyez l'annonce</div>
+          <div class="step-title" data-lang="en">You share the listing</div>
+          <p class="step-desc" data-lang="fr">Collez le texte, envoyez une capture d'écran, ou décrivez simplement le véhicule. Oscar lit AutoTrader, Kijiji, Facebook Marketplace, et plus encore.*</p>
+          <p class="step-desc" data-lang="en">Paste the text, send a screenshot, or just describe the car. Oscar reads AutoTrader, Kijiji, Facebook Marketplace, and more.*</p>
+          <p class="step-legal" data-lang="fr">* AutoTrader, Kijiji et Facebook Marketplace sont des marques de commerce de leurs propriétaires respectifs. Oscar n'est affilié à aucune d'elles et analyse uniquement des annonces publiquement accessibles.</p>
+          <p class="step-legal" data-lang="en">* AutoTrader, Kijiji, and Facebook Marketplace are trademarks of their respective owners. Oscar is not affiliated with them and only analyzes publicly available listings.</p>
+        </div>
+        <div class="step-icon"><img src="assets/step-1-listing.png" alt=""></div>
       </div>
       <div class="step-card">
-        <div class="step-num">02</div>
-        <div class="step-icon">🔍</div>
-        <div class="step-title" data-lang="fr">Oscar compare</div>
-        <div class="step-title" data-lang="en">Oscar compares</div>
-        <p class="step-desc" data-lang="fr">Il vérifie le prix demandé par rapport aux annonces comparables partout au Canada&nbsp;: même année, trim, kilométrage et région.*</p>
-        <p class="step-desc" data-lang="en">He checks the asking price against comparable listings across Canada — same year, trim, mileage, and region.*</p>
-        <p class="step-legal" data-lang="fr">* Les comparaisons s'appuient sur des annonces publiquement accessibles ainsi que sur les données officielles d'évaluation de Canadian Black Book.</p>
-        <p class="step-legal" data-lang="en">* Comparisons draw on publicly available listings and Canadian Black Book's official valuation data.</p>
+        <div class="step-text">
+          <div class="step-title" data-lang="fr">Oscar compare</div>
+          <div class="step-title" data-lang="en">Oscar compares</div>
+          <p class="step-desc" data-lang="fr">Il vérifie le prix demandé par rapport aux annonces comparables partout au Canada&nbsp;: même année, trim, kilométrage et région.*</p>
+          <p class="step-desc" data-lang="en">He checks the asking price against comparable listings across Canada — same year, trim, mileage, and region.*</p>
+          <p class="step-legal" data-lang="fr">* Les comparaisons s'appuient sur des annonces publiquement accessibles ainsi que sur les données officielles d'évaluation de Canadian Black Book.</p>
+          <p class="step-legal" data-lang="en">* Comparisons draw on publicly available listings and Canadian Black Book's official valuation data.</p>
+        </div>
+        <div class="step-icon"><img src="assets/step-2-compare.png" alt=""></div>
       </div>
       <div class="step-card">
-        <div class="step-num">03</div>
-        <div class="step-icon">✓</div>
-        <div class="step-title" data-lang="fr">Oscar vous répond franchement</div>
-        <div class="step-title" data-lang="en">Oscar gives it to you straight</div>
-        <p class="step-desc" data-lang="fr">Aubaine, correct, bof ou trop cher&nbsp;: avec les chiffres à l'appui, les red flags à repérer, et les prochaines étapes à suivre.</p>
-        <p class="step-desc" data-lang="en">Great deal, fair, meh, or overpriced — with the numbers behind it, the red flags to watch, and exactly what to do next.</p>
+        <div class="step-text">
+          <div class="step-title" data-lang="fr">Oscar vous répond franchement</div>
+          <div class="step-title" data-lang="en">Oscar gives it to you straight</div>
+          <p class="step-desc" data-lang="fr">Aubaine, correct, bof ou trop cher&nbsp;: avec les chiffres à l'appui, les red flags à repérer, et les prochaines étapes à suivre.</p>
+          <p class="step-desc" data-lang="en">Great deal, fair, meh, or overpriced — with the numbers behind it, the red flags to watch, and exactly what to do next.</p>
+        </div>
+        <div class="step-icon"><img src="assets/step-3-verdict.png" alt=""></div>
       </div>
     </div>
   </div>
@@ -369,12 +371,12 @@
     <h2 class="section-title" style="color:#F5F5F0; max-width:100%;" data-lang="en">Oscar is on your side. Only yours.</h2>
     <div class="verdicts-grid">
       <div class="verdict-card" style="background:rgba(29,158,117,0.08);">
-        <div class="verdict-pill" style="background:#1D9E75; color:#fff;"><span data-lang="fr">Aubaine</span><span data-lang="en">Great deal</span></div>
+        <div class="verdict-pill" style="background:#E8FF47; color:#1A1A2E;"><span data-lang="fr">Aubaine</span><span data-lang="en">Great deal</span></div>
         <p class="verdict-desc" data-lang="fr">Prix sous le marché. Une occasion réelle. Il faut agir avant que quelqu'un d'autre le fasse.</p>
         <p class="verdict-desc" data-lang="en">Price below market. A real opportunity. Act before someone else does.</p>
       </div>
       <div class="verdict-card" style="background:rgba(245,245,240,0.03);">
-        <div class="verdict-pill" style="background:rgba(245,245,240,0.1); color:#F5F5F0;"><span data-lang="fr">Correct</span><span data-lang="en">Fair</span></div>
+        <div class="verdict-pill" style="background:#1D9E75; color:#fff;"><span data-lang="fr">Correct</span><span data-lang="en">Fair</span></div>
         <p class="verdict-desc" data-lang="fr">Dans la norme du marché. Pas un vol, pas une aubaine. Vaut le déplacement si la condition est bonne.</p>
         <p class="verdict-desc" data-lang="en">Within market range. Not a steal, not a ripoff. Worth a look if the condition checks out.</p>
       </div>
@@ -403,20 +405,17 @@
     <div class="pricing-grid">
 
       <div class="pricing-card">
-        <div class="plan-label" style="color:#888780;" data-lang="fr">Gratuit</div>
-        <div class="plan-label" style="color:#888780;" data-lang="en">Free</div>
+        <div class="plan-label" style="color:#888780;" data-lang="fr">Essai gratuit</div>
+        <div class="plan-label" style="color:#888780;" data-lang="en">Free trial</div>
         <div class="plan-price" style="color:#1A1A2E;">$0</div>
-        <div class="plan-period" style="color:#888780;" data-lang="fr">pour toujours</div>
-        <div class="plan-period" style="color:#888780;" data-lang="en">forever</div>
+        <div class="plan-period" style="color:#888780;" data-lang="fr">3 analyses, connexion requise</div>
+        <div class="plan-period" style="color:#888780;" data-lang="en">3 listings, login required</div>
         <div class="plan-divider"></div>
-        <div class="plan-feature"><div class="feature-check" style="background:#E1F5EE; color:#1D9E75;">✓</div><span style="color:#444441;" data-lang="fr">1 analyse gratuite par jour</span><span style="color:#444441;" data-lang="en">1 free analysis per day</span></div>
+        <div class="plan-feature"><div class="feature-check" style="background:#E1F5EE; color:#1D9E75;">✓</div><span style="color:#444441;" data-lang="fr">Aucune carte de crédit requise</span><span style="color:#444441;" data-lang="en">No credit card required</span></div>
         <div class="plan-feature"><div class="feature-check" style="background:#E1F5EE; color:#1D9E75;">✓</div><span style="color:#444441;" data-lang="fr">Verdict complet avec explication</span><span style="color:#444441;" data-lang="en">Full verdict with explanation</span></div>
         <div class="plan-feature"><div class="feature-check" style="background:#E1F5EE; color:#1D9E75;">✓</div><span style="color:#444441;" data-lang="fr">Red flags détectés automatiquement</span><span style="color:#444441;" data-lang="en">Red flags detected automatically</span></div>
-        <div class="plan-feature"><div class="feature-dash">—</div><span style="color:#C0BFBB;" data-lang="fr">Guide de négociation</span><span style="color:#C0BFBB;" data-lang="en">Negotiation guide</span></div>
-        <div class="plan-feature"><div class="feature-dash">—</div><span style="color:#C0BFBB;" data-lang="fr">Analyse de fiabilité</span><span style="color:#C0BFBB;" data-lang="en">Reliability analysis</span></div>
-        <div class="plan-feature"><div class="feature-dash">—</div><span style="color:#C0BFBB;" data-lang="fr">Rapport CarFax inclus</span><span style="color:#C0BFBB;" data-lang="en">CarFax report included</span></div>
         <button class="plan-btn" style="background:#F5F5F0; color:#1A1A2E; border:1px solid rgba(26,26,46,0.1);" onclick="window.location='#cta'">
-          <span data-lang="fr">Demandez à Oscar gratuitement</span><span data-lang="en">Ask Oscar for free</span>
+          <span data-lang="fr">Commencer l'essai gratuit</span><span data-lang="en">Start free trial</span>
         </button>
       </div>
 
@@ -424,16 +423,17 @@
         <div class="featured-badge" data-lang="fr">Le plus populaire</div>
         <div class="featured-badge" data-lang="en">Most popular</div>
         <div class="plan-label" style="color:#E8FF47;">Pass Shopper</div>
+        <div class="plan-tagline" style="color:rgba(245,245,240,0.45);" data-lang="fr">Idéal pour un usage ponctuel</div>
+        <div class="plan-tagline" style="color:rgba(245,245,240,0.45);" data-lang="en">Ideal for one-time users</div>
         <div class="plan-price" style="color:#F5F5F0;">$9.99</div>
-        <div class="plan-period" style="color:rgba(245,245,240,0.35);" data-lang="fr">/ 30 jours</div>
-        <div class="plan-period" style="color:rgba(245,245,240,0.35);" data-lang="en">/ 30 days</div>
+        <div class="plan-period" style="color:rgba(245,245,240,0.35);" data-lang="fr">Valide 30 jours</div>
+        <div class="plan-period" style="color:rgba(245,245,240,0.35);" data-lang="en">Valid for 30 days</div>
         <div class="plan-divider" style="background:rgba(255,255,255,0.07);"></div>
-        <div class="plan-feature"><div class="feature-check" style="background:rgba(232,255,71,0.12); color:#E8FF47;">✓</div><span style="color:#F5F5F0;" data-lang="fr">Analyses illimitées</span><span style="color:#F5F5F0;" data-lang="en">Unlimited analyses</span></div>
+        <div class="plan-feature"><div class="feature-check" style="background:rgba(232,255,71,0.12); color:#E8FF47;">✓</div><span style="color:#F5F5F0;" data-lang="fr">Analyses illimitées*</span><span style="color:#F5F5F0;" data-lang="en">Unlimited analyses*</span></div>
         <div class="plan-feature"><div class="feature-check" style="background:rgba(232,255,71,0.12); color:#E8FF47;">✓</div><span style="color:#F5F5F0;" data-lang="fr">Verdict complet avec explication</span><span style="color:#F5F5F0;" data-lang="en">Full verdict with explanation</span></div>
         <div class="plan-feature"><div class="feature-check" style="background:rgba(232,255,71,0.12); color:#E8FF47;">✓</div><span style="color:#F5F5F0;" data-lang="fr">Red flags détectés automatiquement</span><span style="color:#F5F5F0;" data-lang="en">Red flags detected automatically</span></div>
         <div class="plan-feature"><div class="feature-check" style="background:rgba(232,255,71,0.12); color:#E8FF47;">✓</div><span style="color:#F5F5F0;" data-lang="fr">Guide de négociation personnalisé</span><span style="color:#F5F5F0;" data-lang="en">Personalized negotiation guide</span></div>
-        <div class="plan-feature"><div class="feature-dash" style="color:rgba(245,245,240,0.2);">—</div><span style="color:rgba(245,245,240,0.3);" data-lang="fr">Analyse de fiabilité</span><span style="color:rgba(245,245,240,0.3);" data-lang="en">Reliability analysis</span></div>
-        <div class="plan-feature"><div class="feature-dash" style="color:rgba(245,245,240,0.2);">—</div><span style="color:rgba(245,245,240,0.3);" data-lang="fr">Rapport CarFax inclus</span><span style="color:rgba(245,245,240,0.3);" data-lang="en">CarFax report included</span></div>
+        <div class="plan-feature"><div class="feature-check" style="background:rgba(232,255,71,0.12); color:#E8FF47;">✓</div><span style="color:#F5F5F0;" data-lang="fr">Analyse de fiabilité</span><span style="color:#F5F5F0;" data-lang="en">Reliability analysis</span></div>
         <button class="plan-btn" style="background:#E8FF47; color:#1A1A2E;" onclick="window.location='#cta'">
           <span data-lang="fr">Activer le Pass Shopper</span><span data-lang="en">Get the Shopper Pass</span>
         </button>
@@ -441,22 +441,41 @@
 
       <div class="pricing-card">
         <div class="plan-label" style="color:#888780;">Pass Pro</div>
+        <div class="plan-tagline" style="color:#888780;" data-lang="fr">Idéal pour les concessionnaires et professionnels</div>
+        <div class="plan-tagline" style="color:#888780;" data-lang="en">Ideal for car dealers and professionals</div>
         <div class="plan-price" style="color:#1A1A2E;">$24.99</div>
-        <div class="plan-period" style="color:#888780;" data-lang="fr">/ 30 jours</div>
-        <div class="plan-period" style="color:#888780;" data-lang="en">/ 30 days</div>
+        <div class="plan-period" style="color:#888780; margin-bottom:4px;" data-lang="fr">/mois, facturé annuellement</div>
+        <div class="plan-period" style="color:#888780; margin-bottom:4px;" data-lang="en">/mo, billed annually</div>
+        <div class="plan-note" style="color:#888780;" data-lang="fr">39,00 $/mois si facturé mensuellement</div>
+        <div class="plan-note" style="color:#888780;" data-lang="en">$39.00/month if billed monthly</div>
         <div class="plan-divider"></div>
-        <div class="plan-feature"><div class="feature-check" style="background:#E1F5EE; color:#1D9E75;">✓</div><span style="color:#444441;" data-lang="fr">Analyses illimitées</span><span style="color:#444441;" data-lang="en">Unlimited analyses</span></div>
+        <div class="plan-feature"><div class="feature-check" style="background:#E1F5EE; color:#1D9E75;">✓</div><span style="color:#444441;" data-lang="fr">Analyses illimitées*</span><span style="color:#444441;" data-lang="en">Unlimited analyses*</span></div>
         <div class="plan-feature"><div class="feature-check" style="background:#E1F5EE; color:#1D9E75;">✓</div><span style="color:#444441;" data-lang="fr">Verdict complet avec explication</span><span style="color:#444441;" data-lang="en">Full verdict with explanation</span></div>
         <div class="plan-feature"><div class="feature-check" style="background:#E1F5EE; color:#1D9E75;">✓</div><span style="color:#444441;" data-lang="fr">Red flags détectés automatiquement</span><span style="color:#444441;" data-lang="en">Red flags detected automatically</span></div>
         <div class="plan-feature"><div class="feature-check" style="background:#E1F5EE; color:#1D9E75;">✓</div><span style="color:#444441;" data-lang="fr">Guide de négociation personnalisé</span><span style="color:#444441;" data-lang="en">Personalized negotiation guide</span></div>
         <div class="plan-feature"><div class="feature-check" style="background:#E1F5EE; color:#1D9E75;">✓</div><span style="color:#444441;" data-lang="fr">Analyse de fiabilité du modèle</span><span style="color:#444441;" data-lang="en">Full reliability analysis</span></div>
-        <div class="plan-feature"><div class="feature-check" style="background:#E1F5EE; color:#1D9E75;">✓</div><span style="color:#444441;" data-lang="fr">Rapport CarFax inclus</span><span style="color:#444441;" data-lang="en">CarFax report included</span></div>
         <button class="plan-btn" style="background:#1A1A2E; color:#E8FF47;" onclick="window.location='#cta'">
           <span data-lang="fr">Activer le Pass Pro</span><span data-lang="en">Get the Pro Pass</span>
         </button>
       </div>
 
     </div>
+    <div class="pricing-addon">
+      <div>
+        <div class="addon-label" data-lang="fr">Module complémentaire CarFax</div>
+        <div class="addon-label" data-lang="en">CarFax report add-on</div>
+        <div class="addon-desc" data-lang="fr">Ajoutez un rapport CarFax complet à n'importe quel forfait. Achat unique, non inclus dans les tarifs ci-dessus.</div>
+        <div class="addon-desc" data-lang="en">Add a full CarFax report to any plan. One-time purchase, not included in the tiers above.</div>
+      </div>
+      <div class="addon-right">
+        <div class="addon-price">$77.95</div>
+        <button class="addon-btn" onclick="window.location='#cta'">
+          <span data-lang="fr">Ajouter le rapport CarFax</span><span data-lang="en">Add CarFax report</span>
+        </button>
+      </div>
+    </div>
+    <p class="pricing-legal" data-lang="fr">* Les analyses illimitées sont soumises à une politique d'utilisation raisonnable. Les comptes présentant un usage abusif peuvent être suspendus. Le Pass Pro inclut une limite d'utilisation raisonnable plus élevée.</p>
+    <p class="pricing-legal" data-lang="en">* Unlimited analyses are subject to a fair use policy. Accounts showing abusive usage may be suspended. The Pro Pass includes a higher fair use allowance.</p>
   </div>
 </section>
 
@@ -470,6 +489,17 @@
   <button class="btn-dark">
     <span data-lang="fr">Parler à Oscar maintenant</span>
     <span data-lang="en">Talk to Oscar now</span>
+  </button>
+</section>
+
+<section class="coming-section">
+  <h2 class="coming-title" data-lang="fr">Bientôt disponible !</h2>
+  <h2 class="coming-title" data-lang="en">Coming soon!</h2>
+  <p class="coming-sub" data-lang="fr">Oscar pourra bientôt vous aider à acheter un VR, un VTT ou même un bateau.</p>
+  <p class="coming-sub" data-lang="en">Oscar will soon be able to help you buy an RV, an ATV, or even a boat.</p>
+  <button class="btn-primary" onclick="window.location='#cta'">
+    <span data-lang="fr">Rejoindre la liste d'attente de la version bêta</span>
+    <span data-lang="en">Get on the beta test release waitlist</span>
   </button>
 </section>
 
