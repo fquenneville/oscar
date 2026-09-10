@@ -123,8 +123,10 @@
   .feature-dash { width: 18px; height: 18px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 14px; color: rgba(136,135,128,0.4); margin-top: 1px; }
   .plan-btn { width: 100%; padding: 14px; border-radius: 10px; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 14px; cursor: pointer; border: none; margin-top: 24px; transition: opacity 0.2s, transform 0.15s; }
   .plan-tagline { font-size: 12px; font-weight: 300; line-height: 1.4; margin-bottom: 16px; }
-  .plan-note { font-size: 12px; font-weight: 300; margin-bottom: 28px; }
   .pricing-legal { font-size: 11px; color: rgba(26,26,46,0.35); line-height: 1.5; font-weight: 300; text-align: center; max-width: 640px; margin: 24px auto 0; }
+  .launch-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(239,159,39,0.1); border: 1px solid rgba(239,159,39,0.3); border-radius: 100px; padding: 6px 14px; margin-bottom: 18px; }
+  .launch-badge .badge-dot { background: var(--caution); }
+  .launch-badge span { font-size: 12px; color: #B5730F; font-weight: 700; letter-spacing: 0.03em; }
   .plan-btn:hover { opacity: 0.86; transform: translateY(-1px); }
 
   /* ── CTA ── */
@@ -139,6 +141,17 @@
   .coming-section { background: var(--chalk); padding: 80px 48px; text-align: center; }
   .coming-title { font-family: 'Bebas Neue', sans-serif; font-size: 56px; font-weight: 400; color: var(--midnight); letter-spacing: 1px; margin-bottom: 14px; }
   .coming-sub { font-size: 16px; color: rgba(26,26,46,0.55); font-weight: 300; max-width: 520px; margin: 0 auto 32px; line-height: 1.6; }
+  .waitlist-form { display: flex; flex-direction: column; align-items: center; gap: 12px; }
+  .waitlist-hp { position: absolute; left: -9999px; }
+  .waitlist-row { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; }
+  .waitlist-input { padding: 14px 18px; border-radius: 8px; border: 1px solid rgba(26,26,46,0.15); font-family: 'DM Sans', sans-serif; font-size: 15px; width: 280px; max-width: 100%; background: #fff; color: var(--midnight); }
+  .waitlist-input::placeholder { color: rgba(26,26,46,0.35); }
+  .waitlist-input:focus-visible { outline: 2px solid var(--volt); outline-offset: 2px; }
+  .waitlist-note { font-size: 12px; color: rgba(26,26,46,0.4); }
+  .waitlist-error { font-size: 13px; color: var(--alert-red); min-height: 18px; }
+  .waitlist-success { display: none; align-items: center; gap: 8px; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 15px; color: var(--deal-green); }
+  .waitlist-success.show { display: flex; }
+  .waitlist-form.hide { display: none; }
 
   /* ── FOOTER ── */
   footer { background: var(--midnight); padding: 36px 48px; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(255,255,255,0.04); }
@@ -258,8 +271,8 @@
       <h1 class="hero-title" data-lang="fr">Demandez à <span class="accent">Oscar</span><br>avant <span class="accent">d'acheter.</span></h1>
       <h1 class="hero-title" data-lang="en">Ask <span class="accent">Oscar</span><br>before you <span class="accent">buy.</span></h1>
 
-      <p class="hero-sub" data-lang="fr">Le vendeur connaît la voiture mieux que vous. Oscar rétablit l'équilibre&nbsp;: envoyez-lui l'annonce, il vous dit ce que le prix vaut vraiment et ce qu'il faut vérifier.</p>
-      <p class="hero-sub" data-lang="en">The seller knows the car better than you do. Oscar closes that gap. Send him the listing and he'll tell you what the price is really worth and what to check.</p>
+      <p class="hero-sub" data-lang="fr">Le vendeur connaît la voiture mieux que vous. Oscar rétablit l'équilibre&nbsp;: envoyez-lui l'annonce, il vous dit ce que le véhicule vaut vraiment et quelles questions poser.</p>
+      <p class="hero-sub" data-lang="en">The seller knows the car better than you do. Oscar closes that gap. Send him the listing and he'll tell you what the vehicle is really worth and what questions to ask.</p>
 
       <div class="hero-actions">
         <button class="btn-primary" onclick="window.location='#cta'">
@@ -394,19 +407,23 @@
       <p class="eyebrow" data-lang="en">Pricing</p>
       <h2 class="section-title" style="max-width:100%; margin:0 auto; text-align:center;" data-lang="fr">Simple. Transparent.<br>Comme les verdicts d'Oscar.</h2>
       <h2 class="section-title" style="max-width:100%; margin:0 auto; text-align:center;" data-lang="en">Simple. Transparent.<br>Like Oscar's verdicts.</h2>
+      <div class="launch-badge">
+        <div class="badge-dot"></div>
+        <span data-lang="fr">Prix de lancement, pour une durée limitée</span>
+        <span data-lang="en">Launch pricing — limited time</span>
+      </div>
     </div>
     <div class="pricing-grid">
 
       <div class="pricing-card">
         <div class="plan-label" style="color:#888780;" data-lang="fr">Essai gratuit</div>
         <div class="plan-label" style="color:#888780;" data-lang="en">Free trial</div>
-        <div class="plan-price" style="color:#1A1A2E;">$0</div>
-        <div class="plan-period" style="color:#888780;" data-lang="fr">3 analyses, connexion requise</div>
-        <div class="plan-period" style="color:#888780;" data-lang="en">3 listings, login required</div>
+        <div class="plan-price" style="color:#1A1A2E; margin-bottom:28px;" data-lang="fr">Gratuit</div>
+        <div class="plan-price" style="color:#1A1A2E; margin-bottom:28px;" data-lang="en">Free</div>
         <div class="plan-divider"></div>
+        <div class="plan-feature"><div class="feature-check" style="background:#E1F5EE; color:#1D9E75;">✓</div><span style="color:#444441;" data-lang="fr">Assez pour 1 à 3 évaluations</span><span style="color:#444441;" data-lang="en">Enough for 1 to 3 evaluations</span></div>
         <div class="plan-feature"><div class="feature-check" style="background:#E1F5EE; color:#1D9E75;">✓</div><span style="color:#444441;" data-lang="fr">Aucune carte de crédit requise</span><span style="color:#444441;" data-lang="en">No credit card required</span></div>
-        <div class="plan-feature"><div class="feature-check" style="background:#E1F5EE; color:#1D9E75;">✓</div><span style="color:#444441;" data-lang="fr">Verdict complet avec explication</span><span style="color:#444441;" data-lang="en">Full verdict with explanation</span></div>
-        <div class="plan-feature"><div class="feature-check" style="background:#E1F5EE; color:#1D9E75;">✓</div><span style="color:#444441;" data-lang="fr">Red flags détectés automatiquement</span><span style="color:#444441;" data-lang="en">Red flags detected automatically</span></div>
+        <div class="plan-feature"><div class="feature-check" style="background:#E1F5EE; color:#1D9E75;">✓</div><span style="color:#444441;" data-lang="fr">Inscription par courriel requise</span><span style="color:#444441;" data-lang="en">Email registration required</span></div>
         <button class="plan-btn" style="background:#F5F5F0; color:#1A1A2E; border:1px solid rgba(26,26,46,0.1);" onclick="window.location='#cta'">
           <span data-lang="fr">Commencer l'essai gratuit</span><span data-lang="en">Start free trial</span>
         </button>
@@ -416,13 +433,11 @@
         <div class="featured-badge" data-lang="fr">Le plus populaire</div>
         <div class="featured-badge" data-lang="en">Most popular</div>
         <div class="plan-label" style="color:#E8FF47;">Pass Shopper</div>
-        <div class="plan-tagline" style="color:rgba(245,245,240,0.45);" data-lang="fr">Idéal pour un usage ponctuel</div>
-        <div class="plan-tagline" style="color:rgba(245,245,240,0.45);" data-lang="en">Ideal for one-time users</div>
-        <div class="plan-price" style="color:#F5F5F0;">$9.99</div>
+        <div class="plan-price" style="color:#F5F5F0;">$9</div>
         <div class="plan-period" style="color:rgba(245,245,240,0.35);" data-lang="fr">Valide 30 jours</div>
         <div class="plan-period" style="color:rgba(245,245,240,0.35);" data-lang="en">Valid for 30 days</div>
         <div class="plan-divider" style="background:rgba(255,255,255,0.07);"></div>
-        <div class="plan-feature"><div class="feature-check" style="background:rgba(232,255,71,0.12); color:#E8FF47;">✓</div><span style="color:#F5F5F0;" data-lang="fr">Analyses illimitées*</span><span style="color:#F5F5F0;" data-lang="en">Unlimited analyses*</span></div>
+        <div class="plan-feature"><div class="feature-check" style="background:rgba(232,255,71,0.12); color:#E8FF47;">✓</div><span style="color:#F5F5F0;" data-lang="fr">Assez pour 10 à 20 évaluations*</span><span style="color:#F5F5F0;" data-lang="en">Enough for 10 to 20 evaluations*</span></div>
         <div class="plan-feature"><div class="feature-check" style="background:rgba(232,255,71,0.12); color:#E8FF47;">✓</div><span style="color:#F5F5F0;" data-lang="fr">Verdict complet avec explication</span><span style="color:#F5F5F0;" data-lang="en">Full verdict with explanation</span></div>
         <div class="plan-feature"><div class="feature-check" style="background:rgba(232,255,71,0.12); color:#E8FF47;">✓</div><span style="color:#F5F5F0;" data-lang="fr">Red flags détectés automatiquement</span><span style="color:#F5F5F0;" data-lang="en">Red flags detected automatically</span></div>
         <div class="plan-feature"><div class="feature-check" style="background:rgba(232,255,71,0.12); color:#E8FF47;">✓</div><span style="color:#F5F5F0;" data-lang="fr">Guide de négociation personnalisé</span><span style="color:#F5F5F0;" data-lang="en">Personalized negotiation guide</span></div>
@@ -434,27 +449,19 @@
 
       <div class="pricing-card">
         <div class="plan-label" style="color:#888780;">Pass Pro</div>
-        <div class="plan-tagline" style="color:#888780;" data-lang="fr">Idéal pour les concessionnaires et professionnels</div>
-        <div class="plan-tagline" style="color:#888780;" data-lang="en">Ideal for car dealers and professionals</div>
-        <div class="plan-price" style="color:#1A1A2E;">$24.99</div>
-        <div class="plan-period" style="color:#888780; margin-bottom:4px;" data-lang="fr">/mois, facturé annuellement</div>
-        <div class="plan-period" style="color:#888780; margin-bottom:4px;" data-lang="en">/mo, billed annually</div>
-        <div class="plan-note" style="color:#888780;" data-lang="fr">39,00 $/mois si facturé mensuellement</div>
-        <div class="plan-note" style="color:#888780;" data-lang="en">$39.00/month if billed monthly</div>
+        <div class="plan-price" style="color:#1A1A2E;">$25</div>
+        <div class="plan-period" style="color:#888780;" data-lang="fr">Valide 30 jours</div>
+        <div class="plan-period" style="color:#888780;" data-lang="en">Valid for 30 days</div>
         <div class="plan-divider"></div>
-        <div class="plan-feature"><div class="feature-check" style="background:#E1F5EE; color:#1D9E75;">✓</div><span style="color:#444441;" data-lang="fr">Analyses illimitées*</span><span style="color:#444441;" data-lang="en">Unlimited analyses*</span></div>
-        <div class="plan-feature"><div class="feature-check" style="background:#E1F5EE; color:#1D9E75;">✓</div><span style="color:#444441;" data-lang="fr">Verdict complet avec explication</span><span style="color:#444441;" data-lang="en">Full verdict with explanation</span></div>
-        <div class="plan-feature"><div class="feature-check" style="background:#E1F5EE; color:#1D9E75;">✓</div><span style="color:#444441;" data-lang="fr">Red flags détectés automatiquement</span><span style="color:#444441;" data-lang="en">Red flags detected automatically</span></div>
-        <div class="plan-feature"><div class="feature-check" style="background:#E1F5EE; color:#1D9E75;">✓</div><span style="color:#444441;" data-lang="fr">Guide de négociation personnalisé</span><span style="color:#444441;" data-lang="en">Personalized negotiation guide</span></div>
-        <div class="plan-feature"><div class="feature-check" style="background:#E1F5EE; color:#1D9E75;">✓</div><span style="color:#444441;" data-lang="fr">Analyse de fiabilité du modèle</span><span style="color:#444441;" data-lang="en">Full reliability analysis</span></div>
+        <div class="plan-feature"><div class="feature-check" style="background:#E1F5EE; color:#1D9E75;">✓</div><span style="color:#444441;" data-lang="fr">Tout ce qu'il y a dans Shopper, plus assez pour 30 à 50 évaluations*</span><span style="color:#444441;" data-lang="en">Everything in Shopper, plus enough for 30 to 50 evaluations*</span></div>
         <button class="plan-btn" style="background:#1A1A2E; color:#E8FF47;" onclick="window.location='#cta'">
           <span data-lang="fr">Activer le Pass Pro</span><span data-lang="en">Get the Pro Pass</span>
         </button>
       </div>
 
     </div>
-    <p class="pricing-legal" data-lang="fr">* Les analyses illimitées sont soumises à une politique d'utilisation raisonnable. Les comptes présentant un usage abusif peuvent être suspendus. Le Pass Pro inclut une limite d'utilisation raisonnable plus élevée.</p>
-    <p class="pricing-legal" data-lang="en">* Unlimited analyses are subject to a fair use policy. Accounts showing abusive usage may be suspended. The Pro Pass includes a higher fair use allowance.</p>
+    <p class="pricing-legal" data-lang="fr">* Le nombre d'évaluations est une estimation basée sur les crédits IA habituellement utilisés par requête. Le nombre réel peut varier selon la complexité de l'annonce. Les comptes présentant un usage abusif peuvent être suspendus.</p>
+    <p class="pricing-legal" data-lang="en">* The number of evaluations is an estimate based on the AI credits typically used per query. Actual results may vary depending on listing complexity. Accounts showing abusive usage may be suspended.</p>
   </div>
 </section>
 
@@ -476,10 +483,25 @@
   <h2 class="coming-title" data-lang="en">Coming soon!</h2>
   <p class="coming-sub" data-lang="fr">Oscar pourra bientôt vous aider à acheter un VR, un VTT ou même un bateau.</p>
   <p class="coming-sub" data-lang="en">Oscar will soon be able to help you buy an RV, an ATV, or even a boat.</p>
-  <button class="btn-primary" onclick="window.location='#cta'">
-    <span data-lang="fr">Rejoindre la liste d'attente de la version bêta</span>
-    <span data-lang="en">Get on the beta test release waitlist</span>
-  </button>
+  <form id="waitlist-form" class="waitlist-form" name="waitlist" method="POST" data-netlify="true" netlify-honeypot="bot-field" onsubmit="return handleWaitlistSubmit(event)">
+    <input type="hidden" name="form-name" value="waitlist">
+    <p class="waitlist-hp"><label>Don't fill this out: <input name="bot-field"></label></p>
+    <div class="waitlist-row">
+      <input type="email" name="email" id="waitlist-email" class="waitlist-input" required placeholder="you@email.com">
+      <button type="submit" class="btn-primary">
+        <span data-lang="fr">Rejoindre la liste d'attente</span>
+        <span data-lang="en">Join the waitlist</span>
+      </button>
+    </div>
+    <p class="waitlist-error" id="waitlist-error"></p>
+    <p class="waitlist-note" data-lang="fr">Aucun spam. Un seul courriel quand la version bêta est prête.</p>
+    <p class="waitlist-note" data-lang="en">No spam. One email when the beta is ready.</p>
+  </form>
+  <div class="waitlist-success" id="waitlist-success">
+    <span>✓</span>
+    <span data-lang="fr">Merci ! Vous êtes sur la liste d'attente.</span>
+    <span data-lang="en">Thanks! You're on the waitlist.</span>
+  </div>
 </section>
 
 <footer>
@@ -506,6 +528,29 @@
   }
   // Auto-detect browser language
   if ((navigator.language || '').toLowerCase().startsWith('en')) setLang('en');
+
+  function handleWaitlistSubmit(event) {
+    event.preventDefault();
+    const form = event.target;
+    const errorEl = document.getElementById('waitlist-error');
+    errorEl.textContent = '';
+
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams(new FormData(form)).toString()
+    }).then((response) => {
+      if (!response.ok) throw new Error('Network response was not ok');
+      form.classList.add('hide');
+      document.getElementById('waitlist-success').classList.add('show');
+    }).catch(() => {
+      errorEl.textContent = document.documentElement.lang === 'fr'
+        ? "Une erreur est survenue. Veuillez réessayer."
+        : 'Something went wrong. Please try again.';
+    });
+
+    return false;
+  }
 </script>
 
 </body>
