@@ -106,6 +106,15 @@
   .verdict-pill { display: inline-block; font-family: 'Bricolage Grotesque', sans-serif; font-size: 12px; font-weight: 700; padding: 5px 13px; border-radius: 100px; margin-bottom: 14px; letter-spacing: 0.05em; }
   .verdict-desc { font-size: 13px; color: rgba(245,245,240,0.45); line-height: 1.65; font-weight: 300; }
 
+  /* ── WHY OSCAR ── */
+  .why-section { background: #fff; padding: 96px 48px; }
+  .why-section .section-title { max-width: 760px; font-size: 44px; margin-bottom: 48px; }
+  .why-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+  .why-card { background: var(--chalk); border: 1px solid var(--light-border); border-radius: 18px; padding: 32px 28px; transition: transform 0.25s ease, box-shadow 0.25s ease; }
+  .why-card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(26,26,46,0.08); }
+  .why-title { font-family: 'Bricolage Grotesque', sans-serif; font-size: 20px; font-weight: 700; color: var(--midnight); margin-bottom: 10px; letter-spacing: -0.3px; }
+  .why-desc { font-size: 15px; color: rgba(26,26,46,0.65); line-height: 1.65; font-weight: 300; }
+
   /* ── PRICING ── */
   .pricing-section { padding: 96px 48px; }
   .pricing-header { text-align: center; margin-bottom: 56px; }
@@ -128,6 +137,25 @@
   .launch-badge .badge-dot { background: var(--caution); }
   .launch-badge span { font-size: 12px; color: #B5730F; font-weight: 700; letter-spacing: 0.03em; }
   .plan-btn:hover { opacity: 0.86; transform: translateY(-1px); }
+
+  /* ── FAQ ── */
+  .faq-section { background: var(--midnight); padding: 96px 48px; }
+  .faq-inner { max-width: 820px; margin: 0 auto; }
+  .faq-section .eyebrow { color: rgba(232,255,71,0.5); }
+  .faq-section .section-title { color: #F5F5F0; max-width: 100%; margin-bottom: 12px; }
+  .faq-cat { font-family: 'Bricolage Grotesque', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(232,255,71,0.6); margin: 44px 0 6px; }
+  .faq-item { border-bottom: 1px solid rgba(245,245,240,0.08); }
+  .faq-item summary { list-style: none; cursor: pointer; position: relative; padding: 20px 44px 20px 0; font-family: 'Bricolage Grotesque', sans-serif; font-size: 17px; font-weight: 600; color: #F5F5F0; line-height: 1.4; transition: color 0.2s; }
+  .faq-item summary::-webkit-details-marker { display: none; }
+  .faq-item summary::after { content: '+'; position: absolute; right: 6px; top: 50%; transform: translateY(-50%); font-size: 24px; font-weight: 400; color: var(--volt); line-height: 1; }
+  .faq-item[open] summary::after { content: '\2212'; }
+  .faq-item summary:hover { color: var(--volt); }
+  .faq-item summary:focus-visible { outline: 2px solid var(--volt); outline-offset: 2px; border-radius: 4px; }
+  .faq-a { padding: 0 44px 24px 0; }
+  .faq-a p, .faq-a li { font-size: 15px; line-height: 1.7; color: rgba(245,245,240,0.62); font-weight: 300; }
+  .faq-a ul { margin: 0; padding-left: 20px; }
+  .faq-a li { margin-bottom: 8px; }
+  .faq-a strong { color: #F5F5F0; font-weight: 600; }
 
   /* ── CTA ── */
   .cta-section { background: var(--volt); padding: 96px 48px; text-align: center; }
@@ -217,7 +245,10 @@
     .hero-inner { grid-template-columns: 1fr; gap: 48px; }
     .hero-title { font-size: 64px; }
     .phone-wrap { display: none; }
-    .how-section, .verdicts-section, .pricing-section { padding: 64px 24px; }
+    .how-section, .verdicts-section, .pricing-section, .why-section, .faq-section { padding: 64px 24px; }
+    .why-grid { grid-template-columns: 1fr; }
+    .why-section .section-title { font-size: 30px; margin-bottom: 36px; }
+    .faq-item summary { font-size: 16px; }
     .steps-grid { grid-template-columns: 1fr; }
     .verdicts-grid { grid-template-columns: repeat(2, 1fr); }
     .pricing-grid { grid-template-columns: 1fr; max-width: 420px; }
@@ -242,9 +273,11 @@
       <li data-lang="fr"><a href="#how">Comment ça marche</a></li>
       <li data-lang="fr"><a href="#verdicts">Les verdicts</a></li>
       <li data-lang="fr"><a href="#pricing">Tarifs</a></li>
+      <li data-lang="fr"><a href="#faq">FAQ</a></li>
       <li data-lang="en"><a href="#how">How it works</a></li>
       <li data-lang="en"><a href="#verdicts">Verdicts</a></li>
       <li data-lang="en"><a href="#pricing">Pricing</a></li>
+      <li data-lang="en"><a href="#faq">FAQ</a></li>
     </ul>
   </div>
   <div class="nav-right">
@@ -400,6 +433,41 @@
   </div>
 </section>
 
+<section class="why-section" id="why">
+  <div class="section-inner">
+    <p class="eyebrow" data-lang="fr">Pourquoi Oscar</p>
+    <p class="eyebrow" data-lang="en">Why Oscar</p>
+    <h2 class="section-title" data-lang="fr">Acheter une voiture usagée ne devrait pas prendre des semaines, ni vous forcer à faire confiance à votre seule intuition.</h2>
+    <h2 class="section-title" data-lang="en">Buying a used car shouldn't take weeks, or force you to rely on your gut alone.</h2>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-title" data-lang="fr">Gagnez des heures, pas juste des dollars</div>
+        <div class="why-title" data-lang="en">Save hours, not just dollars</div>
+        <p class="why-desc" data-lang="fr">Comparer des dizaines d'annonces, écrire à des vendeurs, se déplacer pour visiter un véhicule surestimé — c'est ce qui prend le plus de temps dans l'achat d'une auto usagée. Oscar fait cette recherche à votre place, en moins de 30 secondes.</p>
+        <p class="why-desc" data-lang="en">Comparing dozens of listings, messaging sellers, driving out to see an overpriced vehicle — that's what eats the most time when buying a used car. Oscar does that research for you, in under 30 seconds.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-title" data-lang="fr">Un accompagnement, pas juste un chiffre</div>
+        <div class="why-title" data-lang="en">Guidance, not just a number</div>
+        <p class="why-desc" data-lang="fr">Un verdict seul ne suffit pas. Oscar vous donne les questions à poser au vendeur, les red flags à surveiller sur l'annonce, et un guide de négociation chiffré — pas des suppositions.</p>
+        <p class="why-desc" data-lang="en">A verdict alone isn't enough. Oscar gives you the questions to ask the seller, the red flags to watch for in the listing, and a negotiation guide backed by numbers — not guesses.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-title" data-lang="fr">Des sources fiables, pas des rumeurs</div>
+        <div class="why-title" data-lang="en">Reliable sources, not hearsay</div>
+        <p class="why-desc" data-lang="fr">Le verdict croise des annonces comparables partout au Canada avec les données officielles de Canadian Black Book — une référence de l'industrie automobile, pas l'opinion d'un vendeur ou d'un ami.</p>
+        <p class="why-desc" data-lang="en">The verdict cross-checks comparable listings across Canada with Canadian Black Book's official data — an industry benchmark, not the opinion of a seller or a friend.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-title" data-lang="fr">Une petite dépense pour éviter une grosse erreur</div>
+        <div class="why-title" data-lang="en">A small expense to avoid a big mistake</div>
+        <p class="why-desc" data-lang="fr">Un véhicule usagé se vend souvent plusieurs milliers de dollars. Payer trop cher ou manquer un red flag coûte largement plus que le prix d'un forfait Oscar.</p>
+        <p class="why-desc" data-lang="en">A used vehicle often sells for several thousand dollars. Overpaying or missing a red flag costs far more than the price of an Oscar plan.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="pricing-section" id="pricing">
   <div class="section-inner">
     <div class="pricing-header">
@@ -465,6 +533,215 @@
   </div>
 </section>
 
+<section class="faq-section" id="faq">
+  <div class="faq-inner">
+    <p class="eyebrow" data-lang="fr">FAQ</p>
+    <p class="eyebrow" data-lang="en">FAQ</p>
+    <h2 class="section-title" data-lang="fr">Questions fréquentes</h2>
+    <h2 class="section-title" data-lang="en">Frequently asked questions</h2>
+    <h3 class="faq-cat"><span data-lang="fr">Général</span><span data-lang="en">General</span></h3>
+    <details class="faq-item">
+      <summary><span data-lang="fr">Qu'est-ce qu'Oscar&nbsp;?</span><span data-lang="en">What is Oscar?</span></summary>
+      <div class="faq-a">
+        <p data-lang="fr">Oscar est un assistant conversationnel qui rétablit l'équilibre entre vous et le vendeur. Envoyez-lui l'annonce d'un véhicule usagé, et il vous dit franchement ce que le véhicule vaut vraiment et quelles questions poser — sans que vous ayez à comparer des dizaines d'annonces ou à vous déplacer pour rien, en moins de 30 secondes.</p>
+        <p data-lang="en">Oscar is a conversational assistant that levels the playing field between you and the seller. Send him the listing for a used vehicle and he'll tell you straight what the vehicle is really worth and what questions to ask — without you having to compare dozens of listings or drive out for nothing, in under 30 seconds.</p>
+      </div>
+    </details>
+    <details class="faq-item">
+      <summary><span data-lang="fr">Est-ce qu'Oscar remplace une inspection mécanique&nbsp;?</span><span data-lang="en">Does Oscar replace a mechanical inspection?</span></summary>
+      <div class="faq-a">
+        <p data-lang="fr">Non. Oscar analyse le prix et les informations de l'annonce, pas l'état réel du véhicule. On recommande toujours de faire inspecter le véhicule par un mécanicien avant l'achat.</p>
+        <p data-lang="en">No. Oscar analyzes the price and the information in the listing, not the vehicle's actual condition. We always recommend having a mechanic inspect the vehicle before you buy.</p>
+      </div>
+    </details>
+    <details class="faq-item">
+      <summary><span data-lang="fr">Dans quelles régions Oscar est-il disponible&nbsp;?</span><span data-lang="en">Which regions is Oscar available in?</span></summary>
+      <div class="faq-a">
+        <p data-lang="fr">Oscar couvre le marché canadien. La couverture peut varier selon les régions — Oscar vous indique si les données disponibles pour votre recherche sont limitées.</p>
+        <p data-lang="en">Oscar covers the Canadian market. Coverage may vary by region — Oscar tells you when the data available for your search is limited.</p>
+      </div>
+    </details>
+    <details class="faq-item">
+      <summary><span data-lang="fr">Est-ce qu'Oscar couvre d'autres types de véhicules que les voitures&nbsp;?</span><span data-lang="en">Does Oscar cover vehicles other than cars?</span></summary>
+      <div class="faq-a">
+        <p data-lang="fr">Pas encore, mais c'est en route&nbsp;! Oscar pourra bientôt vous aider à évaluer un VR, un VTT ou même un bateau. Vous pouvez vous inscrire à la liste d'attente sur la page d'accueil pour être avisé dès que c'est disponible.</p>
+        <p data-lang="en">Not yet, but it's on the way! Oscar will soon be able to help you evaluate an RV, an ATV, or even a boat. You can join the waitlist on the home page to be notified as soon as it's available.</p>
+      </div>
+    </details>
+    <h3 class="faq-cat"><span data-lang="fr">Comment ça marche</span><span data-lang="en">How it works</span></h3>
+    <details class="faq-item">
+      <summary><span data-lang="fr">Comment je soumets une annonce à Oscar&nbsp;?</span><span data-lang="en">How do I submit a listing to Oscar?</span></summary>
+      <div class="faq-a">
+        <p data-lang="fr">Collez le texte de l'annonce, envoyez une capture d'écran, ou décrivez simplement le véhicule. Oscar lit les annonces d'AutoTrader, Kijiji, Facebook Marketplace, et plus encore.</p>
+        <p data-lang="en">Paste the listing text, send a screenshot, or simply describe the vehicle. Oscar reads listings from AutoTrader, Kijiji, Facebook Marketplace, and more.</p>
+      </div>
+    </details>
+    <details class="faq-item">
+      <summary><span data-lang="fr">Sur quoi Oscar se base pour comparer le prix&nbsp;?</span><span data-lang="en">What does Oscar use to compare the price?</span></summary>
+      <div class="faq-a">
+        <p data-lang="fr">Oscar vérifie le prix demandé par rapport aux annonces comparables partout au Canada — même année, trim, kilométrage et région. Ces comparaisons s'appuient sur des annonces publiquement accessibles.</p>
+        <p data-lang="en">Oscar checks the asking price against comparable listings across Canada — same year, trim, mileage, and region. These comparisons draw on publicly available listings.</p>
+      </div>
+    </details>
+    <details class="faq-item">
+      <summary><span data-lang="fr">Combien de temps ça prend&nbsp;?</span><span data-lang="en">How long does it take?</span></summary>
+      <div class="faq-a">
+        <p data-lang="fr">Moins de 30 secondes pour un verdict complet, la plupart du temps.</p>
+        <p data-lang="en">Under 30 seconds for a full verdict, most of the time.</p>
+      </div>
+    </details>
+    <details class="faq-item">
+      <summary><span data-lang="fr">Est-ce qu'Oscar fonctionne sur mobile&nbsp;?</span><span data-lang="en">Does Oscar work on mobile?</span></summary>
+      <div class="faq-a">
+        <p data-lang="fr">Oui. Oscar est accessible depuis n'importe quel navigateur, sur ordinateur comme sur mobile — aucune application à télécharger.</p>
+        <p data-lang="en">Yes. Oscar is accessible from any browser, on desktop or mobile — no app to download.</p>
+      </div>
+    </details>
+    <details class="faq-item">
+      <summary><span data-lang="fr">Est-ce qu'Oscar est affilié à AutoTrader, Kijiji ou Facebook Marketplace&nbsp;?</span><span data-lang="en">Is Oscar affiliated with AutoTrader, Kijiji, or Facebook Marketplace?</span></summary>
+      <div class="faq-a">
+        <p data-lang="fr">Non. Ce sont des marques de commerce de leurs propriétaires respectifs. Oscar n'est affilié à aucune d'elles et analyse uniquement des annonces publiquement accessibles.</p>
+        <p data-lang="en">No. These are trademarks of their respective owners. Oscar is not affiliated with any of them and only analyzes publicly available listings.</p>
+      </div>
+    </details>
+    <h3 class="faq-cat"><span data-lang="fr">Les verdicts</span><span data-lang="en">The verdicts</span></h3>
+    <details class="faq-item">
+      <summary><span data-lang="fr">Que veulent dire les verdicts d'Oscar&nbsp;?</span><span data-lang="en">What do Oscar's verdicts mean?</span></summary>
+      <div class="faq-a">
+        <ul data-lang="fr">
+          <li><strong>Aubaine</strong> — prix sous le marché. Une occasion réelle&nbsp;; il faut agir avant que quelqu'un d'autre le fasse.</li>
+          <li><strong>Correct</strong> — dans la norme du marché. Pas un vol, pas une aubaine&nbsp;; vaut le déplacement si la condition est bonne.</li>
+          <li><strong>Bof</strong> — un peu au-dessus du marché. Il y a de la place pour négocier, et Oscar vous dit exactement combien.</li>
+          <li><strong>Trop cher</strong> — le vendeur demande trop. Passez votre tour ou faites une offre agressive&nbsp;; Oscar explique pourquoi.</li>
+        </ul>
+        <ul data-lang="en">
+          <li><strong>Great deal</strong> — price below market. A real opportunity; act before someone else does.</li>
+          <li><strong>Fair</strong> — within market range. Not a steal, not a ripoff; worth a look if the condition checks out.</li>
+          <li><strong>Meh</strong> — a bit above market. There's room to negotiate, and Oscar tells you exactly how much.</li>
+          <li><strong>Overpriced</strong> — the seller is asking too much. Walk away or go in hard; Oscar explains why.</li>
+        </ul>
+      </div>
+    </details>
+    <details class="faq-item">
+      <summary><span data-lang="fr">D'où vient le verdict d'Oscar&nbsp;?</span><span data-lang="en">Where does Oscar's verdict come from?</span></summary>
+      <div class="faq-a">
+        <p data-lang="fr">Le verdict croise les annonces comparables publiquement accessibles ainsi que les données officielles d'évaluation de <strong>Canadian Black Book</strong>, une référence reconnue dans l'industrie automobile canadienne.</p>
+        <p data-lang="en">The verdict cross-checks publicly available comparable listings with official valuation data from <strong>Canadian Black Book</strong>, a recognized benchmark in the Canadian automotive industry.</p>
+      </div>
+    </details>
+    <details class="faq-item">
+      <summary><span data-lang="fr">Est-ce que le verdict est garanti à 100 %&nbsp;?</span><span data-lang="en">Is the verdict 100% guaranteed?</span></summary>
+      <div class="faq-a">
+        <p data-lang="fr">Non. Le verdict d'Oscar est une aide à la décision basée sur des données de marché&nbsp;; il ne remplace pas votre propre jugement ni une négociation en personne. Les conditions du marché peuvent changer rapidement.</p>
+        <p data-lang="en">No. Oscar's verdict is a decision aid based on market data; it doesn't replace your own judgment or an in-person negotiation. Market conditions can change quickly.</p>
+      </div>
+    </details>
+    <details class="faq-item">
+      <summary><span data-lang="fr">Qu'est-ce que les "red flags" détectés par Oscar&nbsp;?</span><span data-lang="en">What are the "red flags" Oscar detects?</span></summary>
+      <div class="faq-a">
+        <p data-lang="fr">Oscar signale certains éléments à vérifier avant l'achat — par exemple l'absence de rapport d'historique (CarFax), un kilométrage qui semble incohérent avec l'année du véhicule, ou tout autre détail qui mérite une question de plus au vendeur.</p>
+        <p data-lang="en">Oscar flags things to check before you buy — for example a missing history report (CarFax), mileage that seems inconsistent with the vehicle's year, or any other detail worth one more question to the seller.</p>
+      </div>
+    </details>
+    <h3 class="faq-cat"><span data-lang="fr">Tarifs et forfaits</span><span data-lang="en">Pricing and plans</span></h3>
+    <details class="faq-item">
+      <summary><span data-lang="fr">Est-ce qu'Oscar est gratuit&nbsp;?</span><span data-lang="en">Is Oscar free?</span></summary>
+      <div class="faq-a">
+        <p data-lang="fr">Oui. L'essai gratuit permet 1 à 3 évaluations, sans carte de crédit — une inscription par courriel est requise.</p>
+        <p data-lang="en">Yes. The free trial includes 1 to 3 evaluations, no credit card required — email registration is required.</p>
+      </div>
+    </details>
+    <details class="faq-item">
+      <summary><span data-lang="fr">Quelle est la différence entre les forfaits&nbsp;?</span><span data-lang="en">What's the difference between the plans?</span></summary>
+      <div class="faq-a">
+        <ul data-lang="fr">
+          <li><strong>Essai gratuit (0 $)</strong> — 1 à 3 évaluations, aucune carte de crédit requise, inscription par courriel.</li>
+          <li><strong>Pass Shopper (9 $ / 30 jours)</strong> — 10 à 20 évaluations, verdict complet avec explication, red flags détectés automatiquement, guide de négociation personnalisé, analyse de fiabilité.</li>
+          <li><strong>Pass Pro (25 $ / 30 jours)</strong> — tout ce qu'il y a dans Shopper, avec 30 à 50 évaluations.</li>
+        </ul>
+        <ul data-lang="en">
+          <li><strong>Free trial ($0)</strong> — 1 to 3 evaluations, no credit card required, email registration.</li>
+          <li><strong>Shopper Pass ($9 / 30 days)</strong> — 10 to 20 evaluations, full verdict with explanation, automatic red flag detection, personalized negotiation guide, reliability analysis.</li>
+          <li><strong>Pro Pass ($25 / 30 days)</strong> — everything in Shopper, with 30 to 50 evaluations.</li>
+        </ul>
+      </div>
+    </details>
+    <details class="faq-item">
+      <summary><span data-lang="fr">Le prix actuel est-il permanent&nbsp;?</span><span data-lang="en">Is the current price permanent?</span></summary>
+      <div class="faq-a">
+        <p data-lang="fr">Le tarif affiché est un prix de lancement, valide pour une durée limitée.</p>
+        <p data-lang="en">The displayed pricing is launch pricing, valid for a limited time.</p>
+      </div>
+    </details>
+    <details class="faq-item">
+      <summary><span data-lang="fr">Comment le nombre d'évaluations est-il calculé&nbsp;?</span><span data-lang="en">How is the number of evaluations calculated?</span></summary>
+      <div class="faq-a">
+        <p data-lang="fr">Le nombre d'évaluations est une estimation basée sur les crédits IA habituellement utilisés par requête. Le nombre réel peut varier selon la complexité de l'annonce. Les comptes présentant un usage abusif peuvent être suspendus.</p>
+        <p data-lang="en">The number of evaluations is an estimate based on the AI credits typically used per query. The actual number may vary depending on the listing's complexity. Accounts showing abusive usage may be suspended.</p>
+      </div>
+    </details>
+    <details class="faq-item">
+      <summary><span data-lang="fr">Puis-je annuler mon forfait à tout moment&nbsp;?</span><span data-lang="en">Can I cancel my plan at any time?</span></summary>
+      <div class="faq-a">
+        <p data-lang="fr">Oui, vous pouvez annuler votre abonnement en tout temps depuis votre compte.</p>
+        <p data-lang="en">Yes, you can cancel your subscription at any time from your account.</p>
+      </div>
+    </details>
+    <details class="faq-item">
+      <summary><span data-lang="fr">Pourquoi payer pour Oscar plutôt que de magasiner moi-même&nbsp;?</span><span data-lang="en">Why pay for Oscar instead of shopping around myself?</span></summary>
+      <div class="faq-a">
+        <p data-lang="fr">Comparer des dizaines d'annonces, contacter des vendeurs et se déplacer pour visiter des véhicules qui s'avèrent surévalués prend des heures, voire des jours. Oscar fait ce travail de recherche en quelques secondes, avec des sources fiables — données de marché et Canadian Black Book — plutôt que votre seule intuition. Le but&nbsp;: éviter une mauvaise décision d'achat, ce qui, sur un véhicule à plusieurs milliers de dollars, vaut largement le prix d'un forfait.</p>
+        <p data-lang="en">Comparing dozens of listings, contacting sellers, and driving out to see vehicles that turn out to be overpriced takes hours, even days. Oscar does that research in seconds, using reliable sources — market data and Canadian Black Book — rather than your gut feeling alone. The goal: avoid a bad purchase decision, which on a vehicle worth several thousand dollars is well worth the price of a plan.</p>
+      </div>
+    </details>
+    <h3 class="faq-cat"><span data-lang="fr">Le guide de négociation</span><span data-lang="en">The negotiation guide</span></h3>
+    <details class="faq-item">
+      <summary><span data-lang="fr">Oscar peut-il m'aider à négocier&nbsp;?</span><span data-lang="en">Can Oscar help me negotiate?</span></summary>
+      <div class="faq-a">
+        <p data-lang="fr">Oui, avec le Pass Shopper ou le Pass Pro. Quand le prix mérite d'être négocié, Oscar génère un guide de négociation personnalisé avec des arguments et des chiffres à l'appui.</p>
+        <p data-lang="en">Yes, with the Shopper Pass or the Pro Pass. When the price is worth negotiating, Oscar generates a personalized negotiation guide with arguments and figures to back them up.</p>
+      </div>
+    </details>
+    <h3 class="faq-cat"><span data-lang="fr">Données et confidentialité</span><span data-lang="en">Data and privacy</span></h3>
+    <details class="faq-item">
+      <summary><span data-lang="fr">Est-ce qu'Oscar partage mes données avec des tiers&nbsp;?</span><span data-lang="en">Does Oscar share my data with third parties?</span></summary>
+      <div class="faq-a">
+        <p data-lang="fr">Non. Les informations que vous soumettez à Oscar servent uniquement à générer votre verdict.</p>
+        <p data-lang="en">No. The information you submit to Oscar is used only to generate your verdict.</p>
+      </div>
+    </details>
+    <details class="faq-item">
+      <summary><span data-lang="fr">Dois-je créer un compte pour utiliser Oscar&nbsp;?</span><span data-lang="en">Do I need to create an account to use Oscar?</span></summary>
+      <div class="faq-a">
+        <p data-lang="fr">Une inscription par courriel est requise, même pour l'essai gratuit.</p>
+        <p data-lang="en">Email registration is required, even for the free trial.</p>
+      </div>
+    </details>
+    <details class="faq-item">
+      <summary><span data-lang="fr">Comment puis-je poser une question qui n'est pas couverte ici&nbsp;?</span><span data-lang="en">How can I ask a question that isn't covered here?</span></summary>
+      <div class="faq-a">
+        <p data-lang="fr">Consultez la page Contact d'Oscar.</p>
+        <p data-lang="en">Visit Oscar's Contact page.</p>
+      </div>
+    </details>
+    <h3 class="faq-cat"><span data-lang="fr">Limites</span><span data-lang="en">Limits</span></h3>
+    <details class="faq-item">
+      <summary><span data-lang="fr">Est-ce qu'Oscar donne des conseils financiers ou légaux&nbsp;?</span><span data-lang="en">Does Oscar give financial or legal advice?</span></summary>
+      <div class="faq-a">
+        <p data-lang="fr">Non. Oscar fournit une analyse de prix basée sur des données de marché à titre informatif seulement. Il ne remplace pas les conseils d'un professionnel pour toute décision financière importante.</p>
+        <p data-lang="en">No. Oscar provides a price analysis based on market data, for informational purposes only. It does not replace the advice of a professional for any major financial decision.</p>
+      </div>
+    </details>
+    <details class="faq-item">
+      <summary><span data-lang="fr">Est-ce qu'Oscar peut se tromper&nbsp;?</span><span data-lang="en">Can Oscar be wrong?</span></summary>
+      <div class="faq-a">
+        <p data-lang="fr">Comme tout outil basé sur des données de marché, le verdict d'Oscar peut varier si l'annonce contient des informations incomplètes ou inexactes. Vérifiez toujours les détails directement avec le vendeur.</p>
+        <p data-lang="en">Like any tool based on market data, Oscar's verdict can vary if the listing contains incomplete or inaccurate information. Always verify the details directly with the seller.</p>
+      </div>
+    </details>
+  </div>
+</section>
+
 <section class="cta-section" id="cta">
   <h2 class="cta-title" data-lang="fr">Demandez à Oscar<br>avant de signer.</h2>
   <h2 class="cta-title" data-lang="en">Ask Oscar<br>before you sign.</h2>
@@ -507,9 +784,11 @@
 <footer>
   <div class="footer-logo">Oscar.</div>
   <div class="footer-links">
+    <a href="#faq" data-lang="fr">FAQ</a>
     <a href="#" data-lang="fr">Confidentialité</a>
     <a href="#" data-lang="fr">Conditions d'utilisation</a>
     <a href="#" data-lang="fr">Contact</a>
+    <a href="#faq" data-lang="en">FAQ</a>
     <a href="#" data-lang="en">Privacy</a>
     <a href="#" data-lang="en">Terms of use</a>
     <a href="#" data-lang="en">Contact</a>
