@@ -47,10 +47,8 @@
   .hero { background: var(--midnight); padding: 88px 48px 108px; overflow: hidden; position: relative; }
   .hero::before { content: ''; position: absolute; top: -120px; right: -80px; width: 600px; height: 600px; background: radial-gradient(circle, rgba(232,255,71,0.04) 0%, transparent 70%); pointer-events: none; }
   .hero-inner { max-width: 1140px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; }
-  .hero-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(232,255,71,0.08); border: 1px solid rgba(232,255,71,0.2); border-radius: 100px; padding: 6px 14px; margin-bottom: 28px; }
   .badge-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--volt); animation: pulse 2.2s ease-in-out infinite; }
   @keyframes pulse { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.4; transform: scale(0.85); } }
-  .hero-badge span { font-size: 12px; color: rgba(232,255,71,0.8); font-weight: 500; letter-spacing: 0.03em; }
   .hero-title { font-family: 'Bebas Neue', sans-serif; font-size: 88px; font-weight: 400; color: #F5F5F0; line-height: 0.96; letter-spacing: 1px; margin-bottom: 28px; }
   .hero-title .accent { color: var(--volt); }
   .hero-sub { font-size: 17px; color: rgba(245,245,240,0.55); line-height: 1.7; margin-bottom: 38px; font-weight: 300; max-width: 460px; }
@@ -61,26 +59,24 @@
   .btn-ghost:hover { color: rgba(245,245,240,0.8); }
   .hero-platform-note { font-size: 12px; color: rgba(245,245,240,0.25); letter-spacing: 0.02em; }
 
-  /* ── PHONE ── */
-  .phone-wrap { display: flex; justify-content: center; }
-  .phone-frame { background: #0D0D1C; border-radius: 32px; padding: 18px; border: 1px solid rgba(255,255,255,0.07); width: 308px; animation: float 4.5s ease-in-out infinite; box-shadow: 0 40px 80px rgba(0,0,0,0.4); }
-  @keyframes float { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-12px); } }
-  .phone-screen { background: #111120; border-radius: 18px; padding: 20px; overflow: hidden; }
-  .ps-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 18px; }
-  .ps-logo { font-family: 'Bricolage Grotesque', sans-serif; font-size: 15px; font-weight: 800; color: var(--volt); }
-  .ps-status { font-size: 10px; color: rgba(245,245,240,0.3); letter-spacing: 0.05em; }
-  .ps-listing { background: rgba(255,255,255,0.04); border-radius: 12px; padding: 14px; margin-bottom: 14px; border: 1px solid rgba(255,255,255,0.06); }
-  .ps-car-name { font-family: 'Bricolage Grotesque', sans-serif; font-size: 13px; font-weight: 600; color: #F5F5F0; margin-bottom: 5px; }
-  .ps-car-meta { display: flex; gap: 8px; font-size: 11px; color: rgba(245,245,240,0.35); margin-bottom: 10px; flex-wrap: wrap; }
-  .ps-price { font-family: 'Bebas Neue', sans-serif; font-size: 24px; font-weight: 400; color: #F5F5F0; letter-spacing: 1px; }
-  .ps-verdict { background: rgba(29,158,117,0.1); border: 1px solid rgba(29,158,117,0.25); border-radius: 12px; padding: 14px; margin-bottom: 12px; }
-  .ps-verdict-top { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 6px 10px; margin-bottom: 8px; }
-  .ps-badge { background: var(--volt); color: var(--midnight); font-family: 'Bricolage Grotesque', sans-serif; font-size: 10px; font-weight: 700; padding: 4px 10px; border-radius: 100px; letter-spacing: 0.06em; }
-  .ps-saving { font-family: 'Bricolage Grotesque', sans-serif; font-size: 12px; font-weight: 700; color: var(--deal-green); }
-  .ps-verdict-text { font-size: 11px; color: rgba(245,245,240,0.45); line-height: 1.55; }
-  .ps-flags { display: flex; flex-direction: column; gap: 7px; }
-  .ps-flag { display: flex; align-items: center; gap: 8px; font-size: 11px; color: rgba(245,245,240,0.45); }
-  .ps-flag-dot { width: 5px; height: 5px; border-radius: 50%; flex-shrink: 0; }
+  /* ── HERO PARTNER ── */
+  .hero-partner { display: flex; flex-direction: column; gap: 12px; max-width: 380px; margin: 0 auto; width: 100%; }
+  .hero-partner-eyebrow { font-family: 'Bricolage Grotesque', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--volt); }
+  .hero-partner-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(245,245,240,0.1); border-radius: 20px; padding: 22px; }
+  .hero-partner-badge { background: var(--chalk); border-radius: 14px; padding: 16px 20px; margin-bottom: 20px; display: flex; justify-content: center; }
+  .hero-partner-badge img { display: block; height: 80px; width: auto; }
+  .hero-partner-title { font-family: 'Bricolage Grotesque', sans-serif; font-size: 22px; font-weight: 800; color: #F5F5F0; margin-bottom: 8px; letter-spacing: -0.3px; line-height: 1.2; }
+  .hero-partner-sub { font-size: 14px; color: rgba(245,245,240,0.45); font-weight: 300; line-height: 1.5; margin-bottom: 18px; }
+  .hero-partner-divider { height: 1px; background: rgba(245,245,240,0.1); margin-bottom: 16px; }
+  .hero-partner-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+  .hero-partner-label { font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(245,245,240,0.35); }
+  .hero-partner-pill { font-size: 11px; font-weight: 600; color: rgba(245,245,240,0.5); border: 1px solid rgba(245,245,240,0.2); border-radius: 100px; padding: 3px 10px; }
+  .hero-partner-stat { display: flex; justify-content: space-between; align-items: baseline; font-size: 14px; margin-bottom: 8px; }
+  .hero-partner-stat-label { color: rgba(245,245,240,0.5); font-weight: 300; }
+  .hero-partner-stat-value { color: #F5F5F0; font-weight: 700; font-family: 'Bricolage Grotesque', sans-serif; }
+  .hero-partner-verdict { display: flex; align-items: center; gap: 12px; background: rgba(29,158,117,0.12); border: 1px solid rgba(29,158,117,0.25); border-radius: 12px; padding: 12px 16px; margin-top: 16px; }
+  .hero-partner-sep { width: 1px; height: 16px; background: rgba(245,245,240,0.15); flex-shrink: 0; }
+  .hero-partner-saving { font-family: 'Bricolage Grotesque', sans-serif; font-size: 13px; font-weight: 700; color: var(--deal-green); }
 
   /* ── HOW ── */
   .how-section { padding: 96px 48px; }
@@ -91,8 +87,8 @@
   .step-card { background: #fff; border: 1px solid var(--light-border); border-radius: 18px; padding: 32px 28px; transition: transform 0.25s ease, box-shadow 0.25s ease; display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; }
   .step-card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(26,26,46,0.08); }
   .step-text { min-width: 0; }
-  .step-icon { width: 92px; height: 92px; border-radius: 12px; background: #fff; display: flex; align-items: center; justify-content: center; flex-shrink: 0; overflow: hidden; }
-  .step-icon img { width: 68px; height: 68px; object-fit: contain; transform: scale(1.25); }
+  .step-icon { width: 92px; height: 92px; border-radius: 12px; background: #fff; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .step-icon img { width: 60px; height: 60px; object-fit: contain; }
   .step-title { font-family: 'Bricolage Grotesque', sans-serif; font-size: 20px; font-weight: 700; color: var(--midnight); margin-bottom: 10px; letter-spacing: -0.3px; }
   .step-desc { font-size: 14px; color: var(--mid-gray); line-height: 1.65; font-weight: 300; }
   .step-legal { font-size: 11px; color: rgba(26,26,46,0.32); line-height: 1.5; font-weight: 300; margin-top: 10px; }
@@ -143,8 +139,15 @@
   .faq-inner { max-width: 820px; margin: 0 auto; }
   .faq-section .eyebrow { color: rgba(232,255,71,0.5); }
   .faq-section .section-title { color: #F5F5F0; max-width: 100%; margin-bottom: 12px; }
-  .faq-cat { font-family: 'Bricolage Grotesque', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(232,255,71,0.6); margin: 44px 0 6px; }
-  .faq-item { border-bottom: 1px solid rgba(245,245,240,0.08); }
+  .faq-category { border-bottom: 1px solid rgba(245,245,240,0.12); margin-top: 12px; }
+  .faq-category > summary { list-style: none; cursor: pointer; position: relative; padding: 18px 44px 18px 0; font-family: 'Bricolage Grotesque', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(232,255,71,0.75); transition: color 0.2s; }
+  .faq-category > summary::-webkit-details-marker { display: none; }
+  .faq-category > summary::after { content: '+'; position: absolute; right: 6px; top: 50%; transform: translateY(-50%); font-size: 22px; font-weight: 400; color: rgba(245,245,240,0.35); line-height: 1; }
+  .faq-category[open] > summary::after { content: '\2212'; }
+  .faq-category > summary:hover { color: var(--volt); }
+  .faq-category > summary:focus-visible { outline: 2px solid var(--volt); outline-offset: 2px; border-radius: 4px; }
+  .faq-group { padding-bottom: 8px; }
+  .faq-item { border-top: 1px solid rgba(245,245,240,0.08); }
   .faq-item summary { list-style: none; cursor: pointer; position: relative; padding: 20px 44px 20px 0; font-family: 'Bricolage Grotesque', sans-serif; font-size: 17px; font-weight: 600; color: #F5F5F0; line-height: 1.4; transition: color 0.2s; }
   .faq-item summary::-webkit-details-marker { display: none; }
   .faq-item summary::after { content: '+'; position: absolute; right: 6px; top: 50%; transform: translateY(-50%); font-size: 24px; font-weight: 400; color: var(--volt); line-height: 1; }
@@ -210,23 +213,17 @@
   li[data-lang] { display: none; }
   html[lang="fr"] li[data-lang="fr"] { display: flex; }
   html[lang="en"] li[data-lang="en"] { display: flex; }
-  .step-title[data-lang], .plan-label[data-lang], .plan-period[data-lang], .featured-badge[data-lang], .eyebrow[data-lang], .ps-status[data-lang], .ps-saving[data-lang], .ps-verdict-text[data-lang] { display: none; }
+  .step-title[data-lang], .plan-label[data-lang], .plan-period[data-lang], .featured-badge[data-lang], .eyebrow[data-lang] { display: none; }
   html[lang="fr"] .step-title[data-lang="fr"],
   html[lang="fr"] .plan-label[data-lang="fr"],
   html[lang="fr"] .plan-period[data-lang="fr"],
   html[lang="fr"] .featured-badge[data-lang="fr"],
-  html[lang="fr"] .eyebrow[data-lang="fr"],
-  html[lang="fr"] .ps-status[data-lang="fr"],
-  html[lang="fr"] .ps-saving[data-lang="fr"],
-  html[lang="fr"] .ps-verdict-text[data-lang="fr"] { display: revert; }
+  html[lang="fr"] .eyebrow[data-lang="fr"] { display: revert; }
   html[lang="en"] .step-title[data-lang="en"],
   html[lang="en"] .plan-label[data-lang="en"],
   html[lang="en"] .plan-period[data-lang="en"],
   html[lang="en"] .featured-badge[data-lang="en"],
-  html[lang="en"] .eyebrow[data-lang="en"],
-  html[lang="en"] .ps-status[data-lang="en"],
-  html[lang="en"] .ps-saving[data-lang="en"],
-  html[lang="en"] .ps-verdict-text[data-lang="en"] { display: revert; }
+  html[lang="en"] .eyebrow[data-lang="en"] { display: revert; }
   .step-desc[data-lang], .verdict-desc[data-lang] { display: none; }
   html[lang="fr"] .step-desc[data-lang="fr"], html[lang="fr"] .verdict-desc[data-lang="fr"] { display: block; }
   html[lang="en"] .step-desc[data-lang="en"], html[lang="en"] .verdict-desc[data-lang="en"] { display: block; }
@@ -247,7 +244,6 @@
     .hero { padding: 60px 24px 72px; }
     .hero-inner { grid-template-columns: 1fr; gap: 48px; }
     .hero-title { font-size: 64px; }
-    .phone-wrap { display: none; }
     .how-section, .verdicts-section, .pricing-section, .why-section, .faq-section { padding: 64px 24px; }
     .why-grid { grid-template-columns: 1fr; }
     .why-section .section-title { font-size: 30px; margin-bottom: 36px; }
@@ -299,12 +295,6 @@
 <section class="hero">
   <div class="hero-inner">
     <div>
-      <div class="hero-badge">
-        <div class="badge-dot"></div>
-        <span data-lang="fr">Propulsé par les données de Canadian Black Book</span>
-        <span data-lang="en">Powered by Canadian Black Book Data</span>
-      </div>
-
       <h1 class="hero-title" data-lang="fr">Demandez à <span class="accent">Oscar</span><br>avant <span class="accent">d'acheter.</span></h1>
       <h1 class="hero-title" data-lang="en">Ask <span class="accent">Oscar</span><br>before you <span class="accent">buy.</span></h1>
 
@@ -326,38 +316,43 @@
       <p class="hero-platform-note" data-lang="en">Conversational assistant — accessible from any browser or mobile device</p>
     </div>
 
-    <div class="phone-wrap">
-      <div class="phone-frame">
-        <div class="phone-screen">
-          <div class="ps-header">
-            <span class="ps-logo">Oscar</span>
-            <span class="ps-status" data-lang="fr">Analyse en cours…</span>
-            <span class="ps-status" data-lang="en">Analyzing…</span>
+    <div class="hero-partner">
+      <span class="hero-partner-eyebrow" data-lang="fr">Les données derrière le verdict</span>
+      <span class="hero-partner-eyebrow" data-lang="en">The data behind the verdict</span>
+      <div class="hero-partner-card">
+        <div class="hero-partner-badge">
+          <img src="assets/powered-by-black-book.svg" width="160" height="114" alt="Powered by Canadian Black Book" loading="lazy">
+        </div>
+        <div class="hero-partner-title" data-lang="fr">Données fiables. Réponses claires.</div>
+        <div class="hero-partner-title" data-lang="en">Trusted data. Clear answers.</div>
+        <p class="hero-partner-sub" data-lang="fr">Évaluations Canadian Black Book. Les conseils francs d'Oscar.</p>
+        <p class="hero-partner-sub" data-lang="en">Canadian Black Book valuations. Oscar's straight-up advice.</p>
+        <div class="hero-partner-divider"></div>
+        <div class="hero-partner-row">
+          <span class="hero-partner-label" data-lang="fr">Évaluation exemple</span>
+          <span class="hero-partner-label" data-lang="en">Example valuation</span>
+          <span class="hero-partner-pill" data-lang="fr">Fictif</span>
+          <span class="hero-partner-pill" data-lang="en">Illustrative</span>
+        </div>
+        <div class="hero-partner-stat">
+          <span class="hero-partner-stat-label" data-lang="fr">Prix demandé</span>
+          <span class="hero-partner-stat-label" data-lang="en">Asking price</span>
+          <span class="hero-partner-stat-value" data-lang="fr">21 500 $</span>
+          <span class="hero-partner-stat-value" data-lang="en">$21,500</span>
+        </div>
+        <div class="hero-partner-stat">
+          <span class="hero-partner-stat-label" data-lang="fr">Fourchette de marché</span>
+          <span class="hero-partner-stat-label" data-lang="en">Market range</span>
+          <span class="hero-partner-stat-value" data-lang="fr">22 500 $ à 23 800 $</span>
+          <span class="hero-partner-stat-value" data-lang="en">$22,500–$23,800</span>
+        </div>
+        <div class="hero-partner-verdict">
+          <div class="verdict-pill" style="background:#E8FF47; color:#1A1A2E; margin-bottom:0;">
+            <span data-lang="fr">AUBAINE</span><span data-lang="en">GREAT DEAL</span>
           </div>
-          <div class="ps-listing">
-            <div class="ps-car-name">2021 Honda Civic EX</div>
-            <div class="ps-car-meta">
-              <span>87 000 km</span><span>·</span>
-              <span data-lang="fr">Montréal · Privé</span>
-              <span data-lang="en">Montréal · Private</span>
-            </div>
-            <div class="ps-price">$21 500</div>
-          </div>
-          <div class="ps-verdict">
-            <div class="ps-verdict-top">
-              <span class="ps-badge" data-lang="fr">AUBAINE</span>
-              <span class="ps-badge" data-lang="en">GREAT DEAL</span>
-              <span class="ps-saving" data-lang="fr">~$1 800 sous le marché</span>
-              <span class="ps-saving" data-lang="en">~$1,800 below market</span>
-            </div>
-            <div class="ps-verdict-text" data-lang="fr">Les Civic EX 2021 à ce kilométrage se demandent entre $22 500 et $23 800 au Québec. Le prix est solide. Bougez vite.</div>
-            <div class="ps-verdict-text" data-lang="en">2021 Civic EX at this mileage is listed between $22,500 and $23,800 in Quebec. The price is solid — move fast.</div>
-          </div>
-          <div class="ps-flags">
-            <div class="ps-flag"><div class="ps-flag-dot" style="background:#EF9F27;"></div><span data-lang="fr">Pas de CarFax mentionné, recommandé</span><span data-lang="en">No CarFax mentioned — recommended</span></div>
-            <div class="ps-flag"><div class="ps-flag-dot" style="background:#1D9E75;"></div><span data-lang="fr">Kilométrage cohérent pour l'année</span><span data-lang="en">Mileage consistent with the year</span></div>
-            <div class="ps-flag"><div class="ps-flag-dot" style="background:#1D9E75;"></div><span data-lang="fr">Vendeur privé, pas de frais dealer</span><span data-lang="en">Private seller — no dealer fees</span></div>
-          </div>
+          <div class="hero-partner-sep"></div>
+          <span class="hero-partner-saving" data-lang="fr">Plus de 1 000 $ sous le marché</span>
+          <span class="hero-partner-saving" data-lang="en">$1,000+ below market</span>
         </div>
       </div>
     </div>
@@ -380,7 +375,7 @@
           <p class="step-legal" data-lang="fr">* AutoTrader, Kijiji et Facebook Marketplace sont des marques de commerce de leurs propriétaires respectifs. Oscar n'est affilié à aucune d'elles et analyse uniquement des annonces publiquement accessibles.</p>
           <p class="step-legal" data-lang="en">* AutoTrader, Kijiji, and Facebook Marketplace are trademarks of their respective owners. Oscar is not affiliated with them and only analyzes publicly available listings.</p>
         </div>
-        <div class="step-icon"><img src="assets/step-1-listing.png" alt=""></div>
+        <div class="step-icon"><img src="assets/oscar-share-listing.svg" alt=""></div>
       </div>
       <div class="step-card">
         <div class="step-text">
@@ -391,7 +386,7 @@
           <p class="step-legal" data-lang="fr">* Les comparaisons s'appuient sur des annonces publiquement accessibles ainsi que sur les données officielles d'évaluation de Canadian Black Book.</p>
           <p class="step-legal" data-lang="en">* Comparisons draw on publicly available listings and Canadian Black Book's official valuation data.</p>
         </div>
-        <div class="step-icon"><img src="assets/step-2-compare.png" alt=""></div>
+        <div class="step-icon"><img src="assets/oscar-compare-prices.svg" alt=""></div>
       </div>
       <div class="step-card">
         <div class="step-text">
@@ -400,7 +395,7 @@
           <p class="step-desc" data-lang="fr">Aubaine, correct, bof ou trop cher&nbsp;: avec les chiffres à l'appui, les red flags à repérer, et les prochaines étapes à suivre.</p>
           <p class="step-desc" data-lang="en">Great deal, fair, meh, or overpriced — with the numbers behind it, the red flags to watch, and exactly what to do next.</p>
         </div>
-        <div class="step-icon"><img src="assets/step-3-verdict.png" alt=""></div>
+        <div class="step-icon"><img src="assets/oscar-verdict.svg" alt=""></div>
       </div>
     </div>
   </div>
@@ -543,7 +538,9 @@
     <p class="eyebrow" data-lang="en">FAQ</p>
     <h2 class="section-title" data-lang="fr">Questions fréquentes</h2>
     <h2 class="section-title" data-lang="en">Frequently asked questions</h2>
-    <h3 class="faq-cat"><span data-lang="fr">Général</span><span data-lang="en">General</span></h3>
+    <details class="faq-category">
+      <summary><span data-lang="fr">Général</span><span data-lang="en">General</span></summary>
+      <div class="faq-group">
     <details class="faq-item">
       <summary><span data-lang="fr">Qu'est-ce qu'Oscar&nbsp;?</span><span data-lang="en">What is Oscar?</span></summary>
       <div class="faq-a">
@@ -572,7 +569,11 @@
         <p data-lang="en">Not yet, but it's on the way! Oscar will soon be able to help you evaluate an RV, an ATV, or even a boat. You can join the waitlist on the home page to be notified as soon as it's available.</p>
       </div>
     </details>
-    <h3 class="faq-cat"><span data-lang="fr">Comment ça marche</span><span data-lang="en">How it works</span></h3>
+      </div>
+    </details>
+    <details class="faq-category">
+      <summary><span data-lang="fr">Comment ça marche</span><span data-lang="en">How it works</span></summary>
+      <div class="faq-group">
     <details class="faq-item">
       <summary><span data-lang="fr">Comment je soumets une annonce à Oscar&nbsp;?</span><span data-lang="en">How do I submit a listing to Oscar?</span></summary>
       <div class="faq-a">
@@ -608,7 +609,11 @@
         <p data-lang="en">No. These are trademarks of their respective owners. Oscar is not affiliated with any of them and only analyzes publicly available listings.</p>
       </div>
     </details>
-    <h3 class="faq-cat"><span data-lang="fr">Les verdicts</span><span data-lang="en">The verdicts</span></h3>
+      </div>
+    </details>
+    <details class="faq-category">
+      <summary><span data-lang="fr">Les verdicts</span><span data-lang="en">The verdicts</span></summary>
+      <div class="faq-group">
     <details class="faq-item">
       <summary><span data-lang="fr">Que veulent dire les verdicts d'Oscar&nbsp;?</span><span data-lang="en">What do Oscar's verdicts mean?</span></summary>
       <div class="faq-a">
@@ -647,7 +652,11 @@
         <p data-lang="en">Oscar flags things to check before you buy — for example a missing history report (CarFax), mileage that seems inconsistent with the vehicle's year, or any other detail worth one more question to the seller.</p>
       </div>
     </details>
-    <h3 class="faq-cat"><span data-lang="fr">Tarifs et forfaits</span><span data-lang="en">Pricing and plans</span></h3>
+      </div>
+    </details>
+    <details class="faq-category">
+      <summary><span data-lang="fr">Tarifs et forfaits</span><span data-lang="en">Pricing and plans</span></summary>
+      <div class="faq-group">
     <details class="faq-item">
       <summary><span data-lang="fr">Est-ce qu'Oscar est gratuit&nbsp;?</span><span data-lang="en">Is Oscar free?</span></summary>
       <div class="faq-a">
@@ -698,7 +707,11 @@
         <p data-lang="en">Comparing dozens of listings, contacting sellers, and driving out to see vehicles that turn out to be overpriced takes hours, even days. Oscar does that research in seconds, using reliable sources — market data and Canadian Black Book — rather than your gut feeling alone. The goal: avoid a bad purchase decision, which on a vehicle worth several thousand dollars is well worth the price of a plan.</p>
       </div>
     </details>
-    <h3 class="faq-cat"><span data-lang="fr">Le guide de négociation</span><span data-lang="en">The negotiation guide</span></h3>
+      </div>
+    </details>
+    <details class="faq-category">
+      <summary><span data-lang="fr">Le guide de négociation</span><span data-lang="en">The negotiation guide</span></summary>
+      <div class="faq-group">
     <details class="faq-item">
       <summary><span data-lang="fr">Oscar peut-il m'aider à négocier&nbsp;?</span><span data-lang="en">Can Oscar help me negotiate?</span></summary>
       <div class="faq-a">
@@ -706,7 +719,11 @@
         <p data-lang="en">Yes, with the Shopper Pass or the Pro Pass. When the price is worth negotiating, Oscar generates a personalized negotiation guide with arguments and figures to back them up.</p>
       </div>
     </details>
-    <h3 class="faq-cat"><span data-lang="fr">Données et confidentialité</span><span data-lang="en">Data and privacy</span></h3>
+      </div>
+    </details>
+    <details class="faq-category">
+      <summary><span data-lang="fr">Données et confidentialité</span><span data-lang="en">Data and privacy</span></summary>
+      <div class="faq-group">
     <details class="faq-item">
       <summary><span data-lang="fr">Est-ce qu'Oscar partage mes données avec des tiers&nbsp;?</span><span data-lang="en">Does Oscar share my data with third parties?</span></summary>
       <div class="faq-a">
@@ -728,7 +745,11 @@
         <p data-lang="en">Visit Oscar's Contact page.</p>
       </div>
     </details>
-    <h3 class="faq-cat"><span data-lang="fr">Limites</span><span data-lang="en">Limits</span></h3>
+      </div>
+    </details>
+    <details class="faq-category">
+      <summary><span data-lang="fr">Limites</span><span data-lang="en">Limits</span></summary>
+      <div class="faq-group">
     <details class="faq-item">
       <summary><span data-lang="fr">Est-ce qu'Oscar donne des conseils financiers ou légaux&nbsp;?</span><span data-lang="en">Does Oscar give financial or legal advice?</span></summary>
       <div class="faq-a">
@@ -741,6 +762,8 @@
       <div class="faq-a">
         <p data-lang="fr">Comme tout outil basé sur des données de marché, le verdict d'Oscar peut varier si l'annonce contient des informations incomplètes ou inexactes. Vérifiez toujours les détails directement avec le vendeur.</p>
         <p data-lang="en">Like any tool based on market data, Oscar's verdict can vary if the listing contains incomplete or inaccurate information. Always verify the details directly with the seller.</p>
+      </div>
+    </details>
       </div>
     </details>
   </div>
